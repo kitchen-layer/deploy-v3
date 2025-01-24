@@ -1,4 +1,4 @@
-import UniswapV3Factory from '@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json'
+import CustomUniswapV3Factory from '../artifacts/UniswapV3Factory.json'
 import { Contract } from '@ethersproject/contracts'
 import { MigrationStep } from '../migrations'
 
@@ -10,7 +10,7 @@ export const ADD_1BP_FEE_TIER: MigrationStep = async (state, { signer, gasPrice 
     throw new Error('Missing UniswapV3Factory')
   }
 
-  const v3CoreFactory = new Contract(state.v3CoreFactoryAddress, UniswapV3Factory.abi, signer)
+  const v3CoreFactory = new Contract(state.v3CoreFactoryAddress, CustomUniswapV3Factory.abi, signer)
 
   const owner = await v3CoreFactory.owner()
   if (owner !== (await signer.getAddress())) {

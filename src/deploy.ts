@@ -17,11 +17,15 @@ import { DEPLOY_V3_STAKER } from './steps/deploy-v3-staker'
 import { DEPLOY_V3_SWAP_ROUTER_02 } from './steps/deploy-v3-swap-router-02'
 import { TRANSFER_PROXY_ADMIN } from './steps/transfer-proxy-admin'
 import { TRANSFER_V3_CORE_FACTORY_OWNER } from './steps/transfer-v3-core-factory-owner'
+import { DEPLOY_NFT_TIMELOCK } from './steps/deploy-nft-timelock'
+import { DEPLOY_V3_DEPLOYER } from './steps/deploy-v3-deployer'
 
 const MIGRATION_STEPS: MigrationStep[] = [
   // must come first, for address calculations
+  DEPLOY_NFT_TIMELOCK,
   DEPLOY_V3_CORE_FACTORY,
   ADD_1BP_FEE_TIER,
+  DEPLOY_V3_DEPLOYER,
   DEPLOY_MULTICALL2,
   DEPLOY_PROXY_ADMIN,
   DEPLOY_TICK_LENS,

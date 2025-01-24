@@ -9,6 +9,7 @@ export default function createDeployContractStep({
   artifact: { contractName, abi, bytecode, linkReferences },
   computeLibraries,
   computeArguments,
+  overrides,
 }: {
   key: keyof MigrationState
   artifact: {
@@ -19,6 +20,7 @@ export default function createDeployContractStep({
   }
   computeLibraries?: (state: Readonly<MigrationState>, config: MigrationConfig) => { [libraryName: string]: string }
   computeArguments?: (state: Readonly<MigrationState>, config: MigrationConfig) => ConstructorArgs
+  overrides?: { gasLimit?: number }
 }): MigrationStep {
   if (linkReferences && Object.keys(linkReferences).length > 0 && !computeLibraries) {
     throw new Error('Missing function to compute library addresses')
@@ -40,7 +42,10 @@ export default function createDeployContractStep({
 
       let contract: Contract
       try {
-        contract = await factory.deploy(...constructorArgs, { gasPrice: config.gasPrice })
+        contract = await factory.deploy(...constructorArgs, { 
+          gasPrice: config.gasPrice,
+          ...overrides
+        })
       } catch (error) {
         console.error(`Failed to deploy ${contractName}`)
         throw error
