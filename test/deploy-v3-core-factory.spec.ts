@@ -33,7 +33,6 @@ describe('deploy-v3-core-factory', () => {
             signer,
             gasPrice: BigNumber.from(1),
             ownerAddress: DUMMY_ADDRESS,
-            v2CoreFactoryAddress: DUMMY_ADDRESS,
             weth9Address: DUMMY_ADDRESS,
             nativeCurrencyLabelBytes: asciiStringToBytes32('ETH'),
           }
@@ -50,7 +49,6 @@ describe('deploy-v3-core-factory', () => {
             signer,
             gasPrice: BigNumber.from(1),
             ownerAddress: DUMMY_ADDRESS,
-            v2CoreFactoryAddress: DUMMY_ADDRESS,
             weth9Address: DUMMY_ADDRESS,
             nativeCurrencyLabelBytes: asciiStringToBytes32('ETH'),
           }
@@ -70,7 +68,6 @@ describe('deploy-v3-core-factory', () => {
               signer,
               gasPrice: BigNumber.from(1),
               ownerAddress: DUMMY_ADDRESS,
-              v2CoreFactoryAddress: DUMMY_ADDRESS,
               weth9Address: DUMMY_ADDRESS,
               nativeCurrencyLabelBytes: asciiStringToBytes32('ETH'),
             }

@@ -12,8 +12,12 @@ export const DEPLOY_V3_SWAP_ROUTER_02 = createDeployContractStep({
       throw new Error('Missing NFT manager')
     }
 
+    if (!state.v2FactoryAddress) {
+      throw new Error('Missing V2 Factory')
+    }
+
     return [
-      config.v2CoreFactoryAddress,
+      state.v2FactoryAddress,
       state.v3CoreFactoryAddress,
       state.nonfungibleTokenPositionManagerAddress,
       config.weth9Address,

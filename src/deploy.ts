@@ -19,12 +19,18 @@ import { TRANSFER_PROXY_ADMIN } from './steps/transfer-proxy-admin'
 import { TRANSFER_V3_CORE_FACTORY_OWNER } from './steps/transfer-v3-core-factory-owner'
 import { DEPLOY_NFT_TIMELOCK } from './steps/deploy-nft-timelock'
 import { DEPLOY_V3_DEPLOYER } from './steps/deploy-v3-deployer'
+import { DEPLOY_V2_FACTORY } from './steps/deploy-v2-factory'
+import { DEPLOY_FEE_DETECTOR } from './steps/deploy-fee-detector'
+import { DEPLOY_V2_ROUTER } from './steps/deploy-v2-router'
 
 const MIGRATION_STEPS: MigrationStep[] = [
   // must come first, for address calculations
   DEPLOY_NFT_TIMELOCK,
   DEPLOY_V3_CORE_FACTORY,
   ADD_1BP_FEE_TIER,
+  DEPLOY_V2_FACTORY,
+  DEPLOY_FEE_DETECTOR,
+  DEPLOY_V2_ROUTER,
   DEPLOY_V3_DEPLOYER,
   DEPLOY_MULTICALL2,
   DEPLOY_PROXY_ADMIN,
@@ -48,14 +54,12 @@ export default function deploy({
   onStateChange,
   weth9Address,
   nativeCurrencyLabelBytes,
-  v2CoreFactoryAddress,
   ownerAddress,
 }: {
   signer: Signer
   gasPrice: number | undefined
   weth9Address: string
   nativeCurrencyLabelBytes: string
-  v2CoreFactoryAddress: string
   ownerAddress: string
   initialState: MigrationState
   onStateChange: (newState: MigrationState) => Promise<void>
@@ -65,7 +69,7 @@ export default function deploy({
 
   return migrate({
     steps: MIGRATION_STEPS,
-    config: { gasPrice, signer, weth9Address, nativeCurrencyLabelBytes, v2CoreFactoryAddress, ownerAddress },
+    config: { gasPrice, signer, weth9Address, nativeCurrencyLabelBytes, ownerAddress },
     initialState,
     onStateChange,
   })

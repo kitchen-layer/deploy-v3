@@ -11,7 +11,10 @@ export interface MigrationState {
   readonly multicall2Address?: string
   readonly proxyAdminAddress?: string
   readonly quoterV2Address?: string
+  readonly v2FactoryAddress?: string
+  readonly v2RouterAddress?: string
   readonly tickLensAddress?: string
+  readonly feeDetectorAddress?: string
   readonly v3MigratorAddress?: string
   readonly v3StakerAddress?: string
   readonly nftTimelockAddress?: string
@@ -26,7 +29,6 @@ export type MigrationConfig = {
   gasPrice: BigNumber | undefined
   weth9Address: string
   nativeCurrencyLabelBytes: string
-  v2CoreFactoryAddress: string
   ownerAddress: string
 }
 

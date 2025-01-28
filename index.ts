@@ -70,18 +70,6 @@ try {
   process.exit(1)
 }
 
-let v2CoreFactoryAddress: string
-if (typeof program.v2CoreFactoryAddress === 'undefined') {
-  v2CoreFactoryAddress = AddressZero
-} else {
-  try {
-    v2CoreFactoryAddress = getAddress(program.v2CoreFactoryAddress)
-  } catch (error) {
-    console.error('Invalid V2 factory address', (error as Error).message)
-    process.exit(1)
-  }
-}
-
 let ownerAddress: string
 try {
   ownerAddress = getAddress(program.ownerAddress)
@@ -117,7 +105,6 @@ async function run() {
     signer: wallet,
     gasPrice,
     nativeCurrencyLabelBytes,
-    v2CoreFactoryAddress,
     ownerAddress,
     weth9Address,
     initialState: state,
