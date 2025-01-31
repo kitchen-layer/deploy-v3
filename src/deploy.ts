@@ -22,6 +22,7 @@ import { DEPLOY_V3_DEPLOYER } from './steps/deploy-v3-deployer'
 import { DEPLOY_V2_FACTORY } from './steps/deploy-v2-factory'
 import { DEPLOY_FEE_DETECTOR } from './steps/deploy-fee-detector'
 import { DEPLOY_V2_ROUTER } from './steps/deploy-v2-router'
+import { DEPLOY_QUOTER } from './steps/deploy-quoter'
 
 const MIGRATION_STEPS: MigrationStep[] = [
   // must come first, for address calculations
@@ -42,6 +43,7 @@ const MIGRATION_STEPS: MigrationStep[] = [
   DEPLOY_V3_MIGRATOR,
   TRANSFER_V3_CORE_FACTORY_OWNER,
   DEPLOY_V3_STAKER,
+  DEPLOY_QUOTER,
   DEPLOY_QUOTER_V2,
   DEPLOY_V3_SWAP_ROUTER_02,
   TRANSFER_PROXY_ADMIN,

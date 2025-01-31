@@ -10,6 +10,7 @@ export interface MigrationState {
   readonly descriptorProxyAddress?: string
   readonly multicall2Address?: string
   readonly proxyAdminAddress?: string
+  readonly quoterAddress?: string
   readonly quoterV2Address?: string
   readonly v2FactoryAddress?: string
   readonly v2RouterAddress?: string
