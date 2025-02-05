@@ -1,10 +1,10 @@
-import UniswapV2Factory from '@uniswap/v2-core/build/UniswapV2Factory.json'
+import CustomUniswapV2Factory from '../artifacts/UniswapV2Factory.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
 const extendedArtifact = {
-  ...UniswapV2Factory,
+  ...CustomUniswapV2Factory,
   contractName: 'UniswapV2Factory',
-  bytecode: UniswapV2Factory.evm.bytecode.object
+  bytecode: CustomUniswapV2Factory.bytecode.object
 }
 
 export const DEPLOY_V2_FACTORY = createDeployContractStep({

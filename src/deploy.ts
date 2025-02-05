@@ -23,6 +23,7 @@ import { DEPLOY_V2_FACTORY } from './steps/deploy-v2-factory'
 import { DEPLOY_FEE_DETECTOR } from './steps/deploy-fee-detector'
 import { DEPLOY_V2_ROUTER } from './steps/deploy-v2-router'
 import { DEPLOY_QUOTER } from './steps/deploy-quoter'
+import { DEPLOY_UNSUPPORTED_PROTOCOL } from './steps/deploy-unsupported-protocol'
 
 const MIGRATION_STEPS: MigrationStep[] = [
   // must come first, for address calculations
@@ -33,6 +34,7 @@ const MIGRATION_STEPS: MigrationStep[] = [
   DEPLOY_FEE_DETECTOR,
   DEPLOY_V2_ROUTER,
   DEPLOY_V3_DEPLOYER,
+  DEPLOY_UNSUPPORTED_PROTOCOL,
   DEPLOY_MULTICALL2,
   DEPLOY_PROXY_ADMIN,
   DEPLOY_TICK_LENS,
