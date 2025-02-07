@@ -1,13 +1,19 @@
-import UniswapV3Factory from '@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json'
+import CustomUniswapV3Factory from '../artifacts/UniswapV3Factory.json'
 import { Contract } from '@ethersproject/contracts'
-import { MigrationStep } from '../migrations'
+import type { MigrationStep } from '../migrations'
+
+const extendedArtifact = {
+  ...CustomUniswapV3Factory,
+  contractName: 'UniswapV3Factory',
+  bytecode: CustomUniswapV3Factory.bytecode
+}
 
 export const TRANSFER_V3_CORE_FACTORY_OWNER: MigrationStep = async (state, { signer, gasPrice, ownerAddress }) => {
   if (state.v3CoreFactoryAddress === undefined) {
     throw new Error('Missing UniswapV3Factory')
   }
 
-  const v3CoreFactory = new Contract(state.v3CoreFactoryAddress, UniswapV3Factory.abi, signer)
+  const v3CoreFactory = new Contract(state.v3CoreFactoryAddress, extendedArtifact.abi, signer)
 
   const owner = await v3CoreFactory.owner()
   if (owner === ownerAddress)

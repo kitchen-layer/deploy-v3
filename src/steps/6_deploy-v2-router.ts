@@ -1,10 +1,10 @@
-import UniswapV2Router from '@uniswap/v2-periphery/build/UniswapV2Router02.json'
+import CustomUniswapV2Router from '../artifacts/UniswapV2Router02.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
 const extendedArtifact = {
-  ...UniswapV2Router,
+  ...CustomUniswapV2Router,
   contractName: 'UniswapV2Router',
-  bytecode: UniswapV2Router.evm.bytecode.object
+  bytecode: CustomUniswapV2Router.bytecode
 }
 
   export const DEPLOY_V2_ROUTER = createDeployContractStep({

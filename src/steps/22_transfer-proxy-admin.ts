@@ -1,6 +1,6 @@
 import ProxyAdmin from '@openzeppelin/contracts/build/contracts/ProxyAdmin.json'
 import { Contract } from '@ethersproject/contracts'
-import { MigrationStep } from '../migrations'
+import type { MigrationStep } from '../migrations'
 
 export const TRANSFER_PROXY_ADMIN: MigrationStep = async (state, { signer, gasPrice, ownerAddress }) => {
   if (state.proxyAdminAddress === undefined) {

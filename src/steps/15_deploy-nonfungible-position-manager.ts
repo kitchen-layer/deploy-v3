@@ -1,3 +1,4 @@
+// import NonfungiblePositionManager from '@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json'
 import NonfungiblePositionManager from '../artifacts/NonfungiblePositionManager.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

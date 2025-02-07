@@ -1,9 +1,15 @@
-import QuoterV2 from '@uniswap/swap-router-contracts/artifacts/contracts/lens/QuoterV2.sol/QuoterV2.json'
+import CustomQuoter from '../artifacts/Quoter.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
-export const DEPLOY_QUOTER_V2 = createDeployContractStep({
-  key: 'quoterV2Address',
-  artifact: QuoterV2,
+const extendedArtifact = {
+  ...CustomQuoter,
+  contractName: 'Quoter',
+  bytecode: CustomQuoter.bytecode
+}
+
+export const DEPLOY_QUOTER = createDeployContractStep({
+  key: 'quoterAddress',
+  artifact: extendedArtifact,
   computeArguments(state, config) {
     if (state.v3CoreFactoryAddress === undefined) {
       throw new Error('Missing V3 Core Factory')
