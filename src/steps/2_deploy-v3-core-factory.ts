@@ -5,7 +5,7 @@ import createDeployContractStep from './meta/createDeployContractStep'
 const extendedArtifact = {
   ...CustomUniswapV3Factory,
   contractName: 'UniswapV3Factory',
-  bytecode: CustomUniswapV3Factory.bytecode
+  bytecode: CustomUniswapV3Factory.bytecode.object
 }
 
 export const DEPLOY_V3_CORE_FACTORY = createDeployContractStep({

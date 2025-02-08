@@ -5,7 +5,7 @@ import createDeployContractStep from './meta/createDeployContractStep'
 const extendedArtifact = {
   ...CustomTickLens,
   contractName: 'TickLens',
-  bytecode: CustomTickLens.bytecode
+  bytecode: CustomTickLens.bytecode.object
 }
 
 export const DEPLOY_TICK_LENS = createDeployContractStep({

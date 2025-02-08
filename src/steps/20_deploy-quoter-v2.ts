@@ -5,7 +5,7 @@ import createDeployContractStep from './meta/createDeployContractStep'
 const extendedArtifact = {
   ...CustomQuoterV2,
   contractName: 'QuoterV2',
-  bytecode: CustomQuoterV2.bytecode
+  bytecode: CustomQuoterV2.bytecode.object
 }
 
 export const DEPLOY_QUOTER_V2 = createDeployContractStep({

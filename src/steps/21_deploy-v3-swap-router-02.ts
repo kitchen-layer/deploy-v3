@@ -5,7 +5,7 @@ import createDeployContractStep from './meta/createDeployContractStep'
 const extendedArtifact = {
   ...CustomSwapRouter02,
   contractName: 'SwapRouter02',
-  bytecode: CustomSwapRouter02.bytecode
+  bytecode: CustomSwapRouter02.bytecode.object
 }
 
 export const DEPLOY_V3_SWAP_ROUTER_02 = createDeployContractStep({

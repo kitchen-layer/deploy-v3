@@ -25,7 +25,7 @@ export default function createDeployContractStep({
   if (linkReferences && Object.keys(linkReferences).length > 0 && !computeLibraries) {
     throw new Error('Missing function to compute library addresses')
   } else if (computeLibraries && (!linkReferences || Object.keys(linkReferences).length === 0)) {
-    throw new Error('Compute libraries passed but no link references')
+    throw new Error('Compute libraries passed but no link references, artifact name: ' + contractName + ', link references: ' + JSON.stringify(linkReferences))
   }
 
   return async (state, config) => {

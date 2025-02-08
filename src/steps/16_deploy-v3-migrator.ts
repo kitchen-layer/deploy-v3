@@ -5,7 +5,7 @@ import createDeployContractStep from "./meta/createDeployContractStep";
 const extendedArtifact = {
 	...CustomV3Migrator,
 	contractName: "V3Migrator",
-	bytecode: CustomV3Migrator.bytecode,
+	bytecode: CustomV3Migrator.bytecode.object,
 };
 
 export const DEPLOY_V3_MIGRATOR = createDeployContractStep({

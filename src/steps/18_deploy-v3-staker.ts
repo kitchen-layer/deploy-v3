@@ -16,7 +16,7 @@ const MAX_INCENTIVE_DURATION = ONE_YEAR_SECONDS * 2
 const extendedArtifact = {
   ...CustomUniswapV3Staker,
   contractName: 'UniswapV3Staker',
-  bytecode: CustomUniswapV3Staker.bytecode
+  bytecode: CustomUniswapV3Staker.bytecode.object
 }
 
 export const DEPLOY_V3_STAKER = createDeployContractStep({

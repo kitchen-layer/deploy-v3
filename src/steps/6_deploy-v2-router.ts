@@ -4,7 +4,7 @@ import createDeployContractStep from './meta/createDeployContractStep'
 const extendedArtifact = {
   ...CustomUniswapV2Router,
   contractName: 'UniswapV2Router',
-  bytecode: CustomUniswapV2Router.bytecode
+  bytecode: CustomUniswapV2Router.bytecode.object
 }
 
   export const DEPLOY_V2_ROUTER = createDeployContractStep({
