@@ -1,5 +1,6 @@
+// cp ../kitchen-dex-periphery/out/UniswapV3PoolDeployer.sol/UniswapV3PoolDeployer.json ./src/artifacts
 import createDeployContractStep from './meta/createDeployContractStep'
-import UniswapV3Deployer from '../artifacts/UniswapV3Deployer.json'
+import UniswapV3Deployer from '../artifacts/UniswapV3PoolDeployer.json'
 
 const extendedArtifact = {
   ...UniswapV3Deployer,

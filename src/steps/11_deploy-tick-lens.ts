@@ -1,4 +1,4 @@
-// import TickLens from '@uniswap/v3-periphery/artifacts/contracts/lens/TickLens.sol/TickLens.json'
+// cp ../kitchen-dex-periphery/out/TickLens.sol/TickLens.json ./src/artifacts
 import CustomTickLens from '../artifacts/TickLens.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

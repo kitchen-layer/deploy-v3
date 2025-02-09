@@ -1,4 +1,4 @@
-import OldNonfungibleTokenPositionDescriptor from 'v3-periphery-1_3_0/artifacts/contracts/NonfungibleTokenPositionDescriptor.sol/NonfungibleTokenPositionDescriptor.json'
+// cp ../kitchen-dex-periphery/out/NonfungibleTokenPositionDescriptor.sol/NonfungibleTokenPositionDescriptor.json ./src/artifacts
 import CustomNonfungibleTokenPositionDescriptor from '../artifacts/NonfungibleTokenPositionDescriptor.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

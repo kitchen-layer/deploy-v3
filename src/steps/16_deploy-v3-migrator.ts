@@ -1,4 +1,4 @@
-// import V3Migrator from '@uniswap/v3-periphery/artifacts/contracts/V3Migrator.sol/V3Migrator.json'
+// cp ../kitchen-dex-periphery/out/V3Migrator.sol/V3Migrator.json ./src/artifacts
 import CustomV3Migrator from "../artifacts/V3Migrator.json";
 import createDeployContractStep from "./meta/createDeployContractStep";
 

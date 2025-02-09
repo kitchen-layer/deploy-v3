@@ -1,4 +1,4 @@
-// import NonfungiblePositionManager from '@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json'
+// cp ../kitchen-dex-periphery/out/NonfungiblePositionManager.sol/NonfungiblePositionManager.json ./src/artifacts
 import NonfungiblePositionManager from '../artifacts/NonfungiblePositionManager.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

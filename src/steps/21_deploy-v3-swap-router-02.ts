@@ -1,4 +1,4 @@
-// import SwapRouter02 from '@uniswap/swap-router-contracts/artifacts/contracts/SwapRouter02.sol/SwapRouter02.json'
+// cp ../kitchen-swap-router-contracts/out/SwapRouter02.sol/SwapRouter02.json ./src/artifacts
 import CustomSwapRouter02 from '../artifacts/SwapRouter02.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

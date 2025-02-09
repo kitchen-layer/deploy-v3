@@ -1,4 +1,4 @@
-// import UniswapV3Staker from '@uniswap/v3-staker/artifacts/contracts/UniswapV3Staker.sol/UniswapV3Staker.json'
+// cp ../v3-staker/out/UniswapV3Staker.sol/UniswapV3Staker.json ./src/artifacts
 import CustomUniswapV3Staker from '../artifacts/UniswapV3Staker.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

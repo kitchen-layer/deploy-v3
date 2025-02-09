@@ -1,4 +1,4 @@
-// import UniswapV3Factory from '@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json'
+// cp ../kitchen-dex-periphery/out/UniswapV3Factory.sol/UniswapV3Factory.json ./src/artifacts
 import CustomUniswapV3Factory from '../artifacts/UniswapV3Factory.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

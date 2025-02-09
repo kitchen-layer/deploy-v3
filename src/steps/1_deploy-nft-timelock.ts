@@ -1,3 +1,4 @@
+// cp ../kitchen-dex-periphery/out/nftTimelock.sol/SimpleNFTTimelock.json ./src/artifacts
 import SimpleNFTTimelock from  '../artifacts/SimpleNFTTimelock.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 
