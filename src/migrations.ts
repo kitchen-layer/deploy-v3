@@ -16,6 +16,7 @@ export interface MigrationState {
   readonly v2FactoryAddress?: string
   readonly v2RouterAddress?: string
   readonly tickLensAddress?: string
+  readonly mixedRouteQuoterV1Address?: string
   readonly feeDetectorAddress?: string
   readonly v3MigratorAddress?: string
   readonly v3StakerAddress?: string

@@ -24,10 +24,11 @@ import { DEPLOY_FEE_DETECTOR } from "./steps/5_deploy-fee-detector";
 import { DEPLOY_V2_ROUTER } from "./steps/6_deploy-v2-router";
 import { DEPLOY_QUOTER } from "./steps/19_deploy-quoter";
 import { DEPLOY_UNSUPPORTED_PROTOCOL } from "./steps/8_deploy-unsupported-protocol";
+import { DEPLOY_MIXED_ROUTE_QUOTER_V1 } from "./steps/20_deploy-quoter-v2 copy";
 
 const MIGRATION_STEPS: MigrationStep[] = [
 	// must come first, for address calculations
-	DEPLOY_NFT_TIMELOCK,
+  DEPLOY_NFT_TIMELOCK,
 	DEPLOY_V3_CORE_FACTORY,
 	ADD_1BP_FEE_TIER,
 	DEPLOY_V2_FACTORY,
@@ -49,6 +50,7 @@ const MIGRATION_STEPS: MigrationStep[] = [
 	DEPLOY_QUOTER_V2,
 	DEPLOY_V3_SWAP_ROUTER_02,
 	TRANSFER_PROXY_ADMIN,
+  DEPLOY_MIXED_ROUTE_QUOTER_V1
 ];
 
 export default function deploy({
