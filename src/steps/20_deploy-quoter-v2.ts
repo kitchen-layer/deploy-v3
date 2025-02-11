@@ -1,4 +1,4 @@
-// import QuoterV2 from '@uniswap/swap-router-contracts/artifacts/contracts/lens/QuoterV2.sol/QuoterV2.json'
+// cp ../kitchen-swap-router-contracts/out/QuoterV2.sol/QuoterV2.json ./src/artifacts
 import CustomQuoterV2 from '../artifacts/QuoterV2.json'
 import createDeployContractStep from './meta/createDeployContractStep'
 

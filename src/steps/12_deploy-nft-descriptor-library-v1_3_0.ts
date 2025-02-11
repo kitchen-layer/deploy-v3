@@ -1,4 +1,4 @@
-// import NFTDescriptor from 'v3-periphery-1_3_0/artifacts/contracts/libraries/NFTDescriptor.sol/NFTDescriptor.json'
+// cp ../kitchen-dex-periphery/out/NFTDescriptor.sol/NFTDescriptor.json ./src/artifacts
 import NFTDescriptor from  '../artifacts/NFTDescriptor.json'
 import createDeployLibraryStep from './meta/createDeployLibraryStep'
 
