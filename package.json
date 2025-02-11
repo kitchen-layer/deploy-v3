@@ -13,7 +13,9 @@
     "postbuild": "cat shebang.txt dist/index.js > dist/index.cmd.js && mv dist/index.cmd.js dist/index.js",
     "prestart": "yarn build",
     "start": "node dist/index.js",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "verify": "ts-node src/generate-verify-commands.ts",
+    "refresh-artifacts": "ts-node src/refresh-artifacts.ts"
   },
   "files": [
     "dist/"
