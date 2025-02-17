@@ -18,7 +18,6 @@ import { DEPLOY_V3_SWAP_ROUTER_02 } from "./steps/21_deploy-v3-swap-router-02";
 import { TRANSFER_PROXY_ADMIN } from "./steps/22_transfer-proxy-admin";
 import { TRANSFER_V3_CORE_FACTORY_OWNER } from "./steps/17_transfer-v3-core-factory-owner";
 import { DEPLOY_NFT_TIMELOCK } from "./steps/1_deploy-nft-timelock";
-import { DEPLOY_V3_DEPLOYER } from "./steps/7_deploy-v3-deployer";
 import { DEPLOY_V2_FACTORY } from "./steps/4_deploy-v2-factory";
 import { DEPLOY_FEE_DETECTOR } from "./steps/5_deploy-fee-detector";
 import { DEPLOY_V2_ROUTER } from "./steps/6_deploy-v2-router";
@@ -34,7 +33,6 @@ const MIGRATION_STEPS: MigrationStep[] = [
 	DEPLOY_V2_FACTORY,
 	DEPLOY_V2_ROUTER,
 	DEPLOY_FEE_DETECTOR,
-	DEPLOY_V3_DEPLOYER,
 	DEPLOY_UNSUPPORTED_PROTOCOL,
 	DEPLOY_MULTICALL2,
 	DEPLOY_PROXY_ADMIN,

@@ -22,7 +22,6 @@ export interface MigrationState {
   readonly v3StakerAddress?: string
   readonly nftTimelockAddress?: string
   readonly nonfungibleTokenPositionManagerAddress?: string
-  readonly v3DeployerAddress?: string
 }
 
 export type StepOutput = { message: string; hash?: string; address?: string }
