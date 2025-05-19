@@ -1,1 +1,240 @@
-{"abi":[{"type":"function","name":"getPopulatedTicksInWord","inputs":[{"name":"pool","type":"address","internalType":"address"},{"name":"tickBitmapIndex","type":"int16","internalType":"int16"}],"outputs":[{"name":"populatedTicks","type":"tuple[]","internalType":"struct ITickLens.PopulatedTick[]","components":[{"name":"tick","type":"int24","internalType":"int24"},{"name":"liquidityNet","type":"int128","internalType":"int128"},{"name":"liquidityGross","type":"uint128","internalType":"uint128"}]}],"stateMutability":"view"}],"bytecode":{"object":"0x60808060405234610016576104d7908161001b8239f35b5f80fdfe608060409080825260049182361015610016575f80fd5b5f3560e01c63351fb47814610029575f80fd5b346102ec57806003193601126102ec5782356001600160a01b0381811692918390036102ec5760249081359060019682880b8084036102ec5763299ce14b60e11b885281880152602096878186818a5afa908115610405575f916103d8575b505f92895f5b610100811061039f57505086516334324e9f60e21b81529789898581845afa988915610395575f9961035c575b506100c8859b999b610461565b9a6100d589519c8d61043f565b858c526100e186610461565b601f19015f5b81811061032f575050895f905b61015f575b505050505050505050805192808401908085528551809252808386019601925f905b8382106101285786880387f35b8451805160020b895283810151600f0b848a01528101516001600160801b031681890152606090970196938201939085019061011b565b908a9c9a97969594939291610100808210156103255789821b8616610191575b50880190919293949596979a9c6100f4565b91939597985091939560029183830b8a60081b840b01627fffff198112627fffff8213176103135785840b90840b0280930b928303610301578b5163f30dba9360e01b81528981018490529080828d818a5afa80156102f7578f908e5f935f9261025e575b506001600160801b039450519561020c8761040f565b8652600f0b90850152168b830152801561024c578b9694926102458f9a999795938b935f1901998a9161023f8383610479565b52610479565b509061017f565b89601189634e487b7160e01b5f52525ffd5b935050505081813d83116102f0575b610277818361043f565b810103126102ec578051906001600160801b03821682036102ec578e8101519081600f0b82036102ec5760808101518060060b036102ec5760a0810151898116036102ec5760c081015163ffffffff8116036102ec5760e00151801515036102ec578e8d6001600160801b039392905f6101f6565b5f80fd5b503d61026d565b8d513d5f823e3d90fd5b8a60118a634e487b7160e01b5f52525ffd5b8b60118b634e487b7160e01b5f52525ffd5b50509b999b6100f9565b808b8f9d9f8f9384915f8451946103458661040f565b8186528185870152850152010152019c9a9c6100e7565b9098508981813d831161038e575b610374818361043f565b810103126102ec57518060020b81036102ec57975f6100bb565b503d61036a565b88513d5f823e3d90fd5b81811b84166103b1575b018a9061008e565b9490505f1981146103c6578a809101946103a9565b86601185634e487b7160e01b5f52525ffd5b90508781813d83116103fe575b6103ef818361043f565b810103126102ec57515f610088565b503d6103e5565b86513d5f823e3d90fd5b6060810190811067ffffffffffffffff82111761042b57604052565b634e487b7160e01b5f52604160045260245ffd5b90601f8019910116810190811067ffffffffffffffff82111761042b57604052565b67ffffffffffffffff811161042b5760051b60200190565b805182101561048d5760209160051b010190565b634e487b7160e01b5f52603260045260245ffdfea2646970667358221220c3c4d7dfaab85a29e5d8f407df9dff7c2af37b9f0cc1ecf3057b14097d525b5364736f6c63430008180033","sourceMap":"217:1334:114:-:0;;;;;;;;;;;;;;;;;","linkReferences":{}},"deployedBytecode":{"object":"0x608060409080825260049182361015610016575f80fd5b5f3560e01c63351fb47814610029575f80fd5b346102ec57806003193601126102ec5782356001600160a01b0381811692918390036102ec5760249081359060019682880b8084036102ec5763299ce14b60e11b885281880152602096878186818a5afa908115610405575f916103d8575b505f92895f5b610100811061039f57505086516334324e9f60e21b81529789898581845afa988915610395575f9961035c575b506100c8859b999b610461565b9a6100d589519c8d61043f565b858c526100e186610461565b601f19015f5b81811061032f575050895f905b61015f575b505050505050505050805192808401908085528551809252808386019601925f905b8382106101285786880387f35b8451805160020b895283810151600f0b848a01528101516001600160801b031681890152606090970196938201939085019061011b565b908a9c9a97969594939291610100808210156103255789821b8616610191575b50880190919293949596979a9c6100f4565b91939597985091939560029183830b8a60081b840b01627fffff198112627fffff8213176103135785840b90840b0280930b928303610301578b5163f30dba9360e01b81528981018490529080828d818a5afa80156102f7578f908e5f935f9261025e575b506001600160801b039450519561020c8761040f565b8652600f0b90850152168b830152801561024c578b9694926102458f9a999795938b935f1901998a9161023f8383610479565b52610479565b509061017f565b89601189634e487b7160e01b5f52525ffd5b935050505081813d83116102f0575b610277818361043f565b810103126102ec578051906001600160801b03821682036102ec578e8101519081600f0b82036102ec5760808101518060060b036102ec5760a0810151898116036102ec5760c081015163ffffffff8116036102ec5760e00151801515036102ec578e8d6001600160801b039392905f6101f6565b5f80fd5b503d61026d565b8d513d5f823e3d90fd5b8a60118a634e487b7160e01b5f52525ffd5b8b60118b634e487b7160e01b5f52525ffd5b50509b999b6100f9565b808b8f9d9f8f9384915f8451946103458661040f565b8186528185870152850152010152019c9a9c6100e7565b9098508981813d831161038e575b610374818361043f565b810103126102ec57518060020b81036102ec57975f6100bb565b503d61036a565b88513d5f823e3d90fd5b81811b84166103b1575b018a9061008e565b9490505f1981146103c6578a809101946103a9565b86601185634e487b7160e01b5f52525ffd5b90508781813d83116103fe575b6103ef818361043f565b810103126102ec57515f610088565b503d6103e5565b86513d5f823e3d90fd5b6060810190811067ffffffffffffffff82111761042b57604052565b634e487b7160e01b5f52604160045260245ffd5b90601f8019910116810190811067ffffffffffffffff82111761042b57604052565b67ffffffffffffffff811161042b5760051b60200190565b805182101561048d5760209160051b010190565b634e487b7160e01b5f52603260045260245ffdfea2646970667358221220c3c4d7dfaab85a29e5d8f407df9dff7c2af37b9f0cc1ecf3057b14097d525b5364736f6c63430008180033","sourceMap":"217:1334:114:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;217:1334:114;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;510:48:114;;;;;217:1334;;;;510:48;;;;;;;;;;;217:1334;510:48;;;217:1334;620:30;217:1334;665:13;;217:1334;680:7;684:3;680:7;;;;-1:-1:-1;;217:1334:114;;-1:-1:-1;;;837:34:114;;217:1334;837:34;217:1334;837:34;217:1334;;837:34;;;;;;;217:1334;837:34;;;660:110;217:1334;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;-1:-1:-1;;217:1334:114;;;;;;;;956:13;;;217:1334;951:592;217:1334;;;951:592;217:1334;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;217:1334:114;;;;;;;;;;;;;;;;;;;;980:3;684;;;;;;;;;;;;971:7;;;;;;217:1334;;;1003:17;;999:534;;980:3;;;217:1334;956:13;;;;;;;;;;;;999:534;217:1334;;;;;;;;;;;;;;;1114:1;217:1334;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1242:41:114;;;;;217:1334;;;;;;1242:41;217:1334;1242:41;;;;;;;;;;217:1334;;;1242:41;;;999:534;217:1334;-1:-1:-1;;;;;217:1334:114;;;;;;;:::i;:::-;;;;;1344:174;;;217:1334;;1344:174;;;217:1334;;;;;;;;;1301:217;217:1334;;;;;;;;;;;1301:217;;;;;;;:::i;:::-;;;:::i;:::-;;999:534;;;217:1334;;;;;;;;;;;;1242:41;;;;;;;;;;;;;;;;;;:::i;:::-;;;217:1334;;;;;;;-1:-1:-1;;;;;217:1334:114;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1242:41;;-1:-1:-1;;;;;1242:41:114;;;;;;217:1334;;;;1242:41;;;;;;217:1334;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;971:7;;;;;;;;217:1334;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;837:34;;;;;;;;;;;;;;;;;:::i;:::-;;;217:1334;;;;;;;;;;;;837:34;;;;;;;;;;217:1334;;;;;;;;;689:3;217:1334;;;712:17;;708:51;;689:3;217:1334;665:13;;;;708:51;217:1334;;-1:-1:-1;;;217:1334:114;;;;;;;;708:51;;;217:1334;;;;;;;;;;;;510:48;;;;;;;;;;;;;;;;:::i;:::-;;;217:1334;;;;;510:48;;;;;;;;;217:1334;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;","linkReferences":{}},"methodIdentifiers":{"getPopulatedTicksInWord(address,int16)":"351fb478"},"rawMetadata":"{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"internalType\":\"int16\",\"name\":\"tickBitmapIndex\",\"type\":\"int16\"}],\"name\":\"getPopulatedTicksInWord\",\"outputs\":[{\"components\":[{\"internalType\":\"int24\",\"name\":\"tick\",\"type\":\"int24\"},{\"internalType\":\"int128\",\"name\":\"liquidityNet\",\"type\":\"int128\"},{\"internalType\":\"uint128\",\"name\":\"liquidityGross\",\"type\":\"uint128\"}],\"internalType\":\"struct ITickLens.PopulatedTick[]\",\"name\":\"populatedTicks\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getPopulatedTicksInWord(address,int16)\":{\"params\":{\"pool\":\"The address of the pool for which to fetch populated tick data\",\"tickBitmapIndex\":\"The index of the word in the tick bitmap for which to parse the bitmap and fetch all the populated ticks\"},\"returns\":{\"populatedTicks\":\"An array of tick data for the given word in the tick bitmap\"}}},\"title\":\"Tick Lens contract\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getPopulatedTicksInWord(address,int16)\":{\"notice\":\"Get all the tick data for the populated ticks from a word of the tick bitmap of a pool\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/lens/TickLens.sol\":\"TickLens\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/\",\":kitchen-dex-core/=lib/kitchen-dex-core/src/\",\":kitchen-precompiles/=lib/precompiles-solidity/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":precompiles-solidity/=lib/precompiles-solidity/\",\":solady/=lib/precompiles-solidity/lib/solady/src/\",\":v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/\",\":v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/\",\":v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/kitchen-dex-core/src/interfaces/IUniswapV3Pool.sol\":{\"keccak256\":\"0x89d3262aac1105665ca6a83ec8e29c951123dd998df9a52a8dd30296642c2425\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://edca9635ed2aefabc9a3e4d3ffddef0d9a2887bb5ca811e3aeda92cd396bd1c9\",\"dweb:/ipfs/QmaXyTQHUkGvoA3SgEamaYzd9yJe5gFqocUEWT9U7dzBeZ\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolActions.sol\":{\"keccak256\":\"0xbd7bd7f2fcf836799776bcba7bbb609f2d90eed906a6066dc35d6882ca981028\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://679371af0f965881cf2b884758ad7c52ed77b358fd2f904b8641922e9b9271a0\",\"dweb:/ipfs/QmYvh2gHdwSUZ3CpvucZUyTcdeTcw28QDE2chFgDz5ww2L\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolDerivedState.sol\":{\"keccak256\":\"0xf44883d8c8c4f696b991260b14911e00fa780f6cc362ac0e5c3f8e05311fc0f0\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://c70d2d25fc283390db58921ff3fb3d53d6a414313f8fbb5b86637413fb798e4e\",\"dweb:/ipfs/QmbQ9YvRgmBjWBFfjbHnBha29myQKha6SrLNPCecSQb6A9\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolEvents.sol\":{\"keccak256\":\"0xdd271e2ff465939e8c38243d1d73f7087b4eb29b8a70d809b1432313017c5a8d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://126fd841c71638f8a90fab57adbf333db633d53708b311ed3919b4a36838297a\",\"dweb:/ipfs/QmQdfe8mnumHiUSGxcPTij8PfbrtRVYQPoQF2hB2nf1hPR\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolImmutables.sol\":{\"keccak256\":\"0x1dd9d63523907585292b947d310c5bb4dcc1d688bc23542f391d72c3c2e6ddfd\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9db6e1b2dac0a8dbf0cebd2013acc16d5b1c640103f8457bb3138b7813497160\",\"dweb:/ipfs/QmbBhz8yJdcKGBzSZmNYyHjoz6ptRRDo1ZArXkQdKnh6gj\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolOwnerActions.sol\":{\"keccak256\":\"0x718143ded6c17349932749a7f0f3caebe89a0644b1c523a73b36d0a6731b9a25\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://2b5200ed3d593ee8fcf334cb225db07378f2e05159d5c530ae095a79073c5d3c\",\"dweb:/ipfs/QmYxHHvDbp7rThBSd2EPnQTiRJZ9oQXJNxwnFDEHiZQrRk\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolState.sol\":{\"keccak256\":\"0x9b5a3b3bc51ab8004cc9d5fd4209aaafc8a702ca3c5769cbda2f0e12a3ac0075\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://f039df2ebe25ec1ed68e6bfc2c28ad5647e417fabc806fba4011e6a6f230e15c\",\"dweb:/ipfs/Qmdt3ge4ts73pabAipSpn9CHommejUuv1CdoT78FvbEmLn\"]},\"src/interfaces/ITickLens.sol\":{\"keccak256\":\"0xffa83f41bff41aa2ddf6bcba857271345810d591dffb073bc57e1a99694ff738\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://aac6304764a2e595195402967431b436275552599a82ecd5bb749fe8847a246e\",\"dweb:/ipfs/QmZ2GSo2sn3u1xtEdEkv4Soe4mkc19VrzJU7e4EZhnRnMM\"]},\"src/lens/TickLens.sol\":{\"keccak256\":\"0x59c5f26283cbf945aee42c1b1013a59e18eda8a344c39d81e7fbaf38027b12dd\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9fad15f8b3f72c26f9f39ddf2d0e03ba62527a099d2ca62e47cc377b5362394a\",\"dweb:/ipfs/QmXmxmPStHriVpryv6zQqJ3qKTBZ99XA2MbJc1DXPyDho1\"]}},\"version\":1}","metadata":{"compiler":{"version":"0.8.24+commit.e11b9ed9"},"language":"Solidity","output":{"abi":[{"inputs":[{"internalType":"address","name":"pool","type":"address"},{"internalType":"int16","name":"tickBitmapIndex","type":"int16"}],"stateMutability":"view","type":"function","name":"getPopulatedTicksInWord","outputs":[{"internalType":"struct ITickLens.PopulatedTick[]","name":"populatedTicks","type":"tuple[]","components":[{"internalType":"int24","name":"tick","type":"int24"},{"internalType":"int128","name":"liquidityNet","type":"int128"},{"internalType":"uint128","name":"liquidityGross","type":"uint128"}]}]}],"devdoc":{"kind":"dev","methods":{"getPopulatedTicksInWord(address,int16)":{"params":{"pool":"The address of the pool for which to fetch populated tick data","tickBitmapIndex":"The index of the word in the tick bitmap for which to parse the bitmap and fetch all the populated ticks"},"returns":{"populatedTicks":"An array of tick data for the given word in the tick bitmap"}}},"version":1},"userdoc":{"kind":"user","methods":{"getPopulatedTicksInWord(address,int16)":{"notice":"Get all the tick data for the populated ticks from a word of the tick bitmap of a pool"}},"version":1}},"settings":{"remappings":["@openzeppelin/=lib/openzeppelin-contracts/","ds-test/=lib/forge-std/lib/ds-test/src/","erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/","forge-std/=lib/forge-std/src/","halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/","kitchen-dex-core/=lib/kitchen-dex-core/src/","kitchen-precompiles/=lib/precompiles-solidity/src/","openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/","precompiles-solidity/=lib/precompiles-solidity/","solady/=lib/precompiles-solidity/lib/solady/src/","v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/","v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/","v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/"],"optimizer":{"enabled":true,"runs":200},"metadata":{"bytecodeHash":"ipfs"},"compilationTarget":{"src/lens/TickLens.sol":"TickLens"},"evmVersion":"cancun","libraries":{},"viaIR":true},"sources":{"lib/kitchen-dex-core/src/interfaces/IUniswapV3Pool.sol":{"keccak256":"0x89d3262aac1105665ca6a83ec8e29c951123dd998df9a52a8dd30296642c2425","urls":["bzz-raw://edca9635ed2aefabc9a3e4d3ffddef0d9a2887bb5ca811e3aeda92cd396bd1c9","dweb:/ipfs/QmaXyTQHUkGvoA3SgEamaYzd9yJe5gFqocUEWT9U7dzBeZ"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolActions.sol":{"keccak256":"0xbd7bd7f2fcf836799776bcba7bbb609f2d90eed906a6066dc35d6882ca981028","urls":["bzz-raw://679371af0f965881cf2b884758ad7c52ed77b358fd2f904b8641922e9b9271a0","dweb:/ipfs/QmYvh2gHdwSUZ3CpvucZUyTcdeTcw28QDE2chFgDz5ww2L"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolDerivedState.sol":{"keccak256":"0xf44883d8c8c4f696b991260b14911e00fa780f6cc362ac0e5c3f8e05311fc0f0","urls":["bzz-raw://c70d2d25fc283390db58921ff3fb3d53d6a414313f8fbb5b86637413fb798e4e","dweb:/ipfs/QmbQ9YvRgmBjWBFfjbHnBha29myQKha6SrLNPCecSQb6A9"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolEvents.sol":{"keccak256":"0xdd271e2ff465939e8c38243d1d73f7087b4eb29b8a70d809b1432313017c5a8d","urls":["bzz-raw://126fd841c71638f8a90fab57adbf333db633d53708b311ed3919b4a36838297a","dweb:/ipfs/QmQdfe8mnumHiUSGxcPTij8PfbrtRVYQPoQF2hB2nf1hPR"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolImmutables.sol":{"keccak256":"0x1dd9d63523907585292b947d310c5bb4dcc1d688bc23542f391d72c3c2e6ddfd","urls":["bzz-raw://9db6e1b2dac0a8dbf0cebd2013acc16d5b1c640103f8457bb3138b7813497160","dweb:/ipfs/QmbBhz8yJdcKGBzSZmNYyHjoz6ptRRDo1ZArXkQdKnh6gj"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolOwnerActions.sol":{"keccak256":"0x718143ded6c17349932749a7f0f3caebe89a0644b1c523a73b36d0a6731b9a25","urls":["bzz-raw://2b5200ed3d593ee8fcf334cb225db07378f2e05159d5c530ae095a79073c5d3c","dweb:/ipfs/QmYxHHvDbp7rThBSd2EPnQTiRJZ9oQXJNxwnFDEHiZQrRk"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolState.sol":{"keccak256":"0x9b5a3b3bc51ab8004cc9d5fd4209aaafc8a702ca3c5769cbda2f0e12a3ac0075","urls":["bzz-raw://f039df2ebe25ec1ed68e6bfc2c28ad5647e417fabc806fba4011e6a6f230e15c","dweb:/ipfs/Qmdt3ge4ts73pabAipSpn9CHommejUuv1CdoT78FvbEmLn"],"license":"GPL-2.0-or-later"},"src/interfaces/ITickLens.sol":{"keccak256":"0xffa83f41bff41aa2ddf6bcba857271345810d591dffb073bc57e1a99694ff738","urls":["bzz-raw://aac6304764a2e595195402967431b436275552599a82ecd5bb749fe8847a246e","dweb:/ipfs/QmZ2GSo2sn3u1xtEdEkv4Soe4mkc19VrzJU7e4EZhnRnMM"],"license":"GPL-2.0-or-later"},"src/lens/TickLens.sol":{"keccak256":"0x59c5f26283cbf945aee42c1b1013a59e18eda8a344c39d81e7fbaf38027b12dd","urls":["bzz-raw://9fad15f8b3f72c26f9f39ddf2d0e03ba62527a099d2ca62e47cc377b5362394a","dweb:/ipfs/QmXmxmPStHriVpryv6zQqJ3qKTBZ99XA2MbJc1DXPyDho1"],"license":"GPL-2.0-or-later"}},"version":1},"id":114}
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "getPopulatedTicksInWord",
+      "inputs": [
+        {
+          "name": "pool",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "tickBitmapIndex",
+          "type": "int16",
+          "internalType": "int16"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "populatedTicks",
+          "type": "tuple[]",
+          "internalType": "struct ITickLens.PopulatedTick[]",
+          "components": [
+            {
+              "name": "tick",
+              "type": "int24",
+              "internalType": "int24"
+            },
+            {
+              "name": "liquidityNet",
+              "type": "int128",
+              "internalType": "int128"
+            },
+            {
+              "name": "liquidityGross",
+              "type": "uint128",
+              "internalType": "uint128"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60808060405234610016576104ba908161001c8239f35b600080fdfe608080604052600436101561001357600080fd5b60003560e01c63351fb4781461002857600080fd5b3461030b57604036600319011261030b576004356001600160a01b038116810361030b57600190602435820b806024350361030b5763299ce14b60e11b845260048401526020836024816001600160a01b0385165afa928315610318576000936103ba575b5060008260005b61010081106103925750506040516334324e9f60e21b81526020816004816001600160a01b0387165afa90811561031857600091610356575b506100d782610442565b926100e56040519485610420565b8284526100f183610442565b601f190160005b81811061032a57505084956000959495965b61017f575b50505050909150604051906020820160208352835180915260206040840194019060005b8181106101405784860385f35b9091926020606082976001600160801b0360408851805160020b845285810151600f0b8685015201511660408201520194019101949294919091610133565b86610100869810156103245785811b821661019d575b85019661010a565b945060029360243560081b850b86860b01627fffff8113627fffff1982121761025d5784860b90860b028080870b0361025d5760405163f30dba9360e01b815281870b6004820152610100816024816001600160a01b0389165afa801561031857600091600091610273575b506001600160801b0392604051986102208a6103ee565b0b8852600f0b6020880152166040860152801561025d5787958691600019019561024a878a61045a565b52610255868961045a565b509050610195565b634e487b7160e01b600052601160045260246000fd5b915050610100813d61010011610310575b816102926101009383610420565b8101031261030b578051916001600160801b038316830361030b5760208201519182600f0b830361030b5760808101518060060b0361030b5760a08101516001600160a01b0381160361030b5760c081015163ffffffff81160361030b5760e001518015150361030b5791906001600160801b03610209565b600080fd5b3d9150610284565b6040513d6000823e3d90fd5b5061010f565b602090604051610339816103ee565b6000815260008382015260006040820152828289010152016100f8565b90506020813d60201161038a575b8161037160209383610420565b8101031261030b57518060020b810361030b57386100cd565b3d9150610364565b81811b86166103a4575b018390610094565b919050600019811461025d57838091019161039c565b9092506020813d6020116103e6575b816103d660209383610420565b8101031261030b5751913861008d565b3d91506103c9565b6060810190811067ffffffffffffffff82111761040a57604052565b634e487b7160e01b600052604160045260246000fd5b90601f8019910116810190811067ffffffffffffffff82111761040a57604052565b67ffffffffffffffff811161040a5760051b60200190565b805182101561046e5760209160051b010190565b634e487b7160e01b600052603260045260246000fdfea2646970667358221220754fa7e7feec3e73eafd1439ad021e4686c2c214de7dbcd44de55036df78ca5064736f6c63430008180033",
+    "sourceMap": "217:1334:115:-:0;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608080604052600436101561001357600080fd5b60003560e01c63351fb4781461002857600080fd5b3461030b57604036600319011261030b576004356001600160a01b038116810361030b57600190602435820b806024350361030b5763299ce14b60e11b845260048401526020836024816001600160a01b0385165afa928315610318576000936103ba575b5060008260005b61010081106103925750506040516334324e9f60e21b81526020816004816001600160a01b0387165afa90811561031857600091610356575b506100d782610442565b926100e56040519485610420565b8284526100f183610442565b601f190160005b81811061032a57505084956000959495965b61017f575b50505050909150604051906020820160208352835180915260206040840194019060005b8181106101405784860385f35b9091926020606082976001600160801b0360408851805160020b845285810151600f0b8685015201511660408201520194019101949294919091610133565b86610100869810156103245785811b821661019d575b85019661010a565b945060029360243560081b850b86860b01627fffff8113627fffff1982121761025d5784860b90860b028080870b0361025d5760405163f30dba9360e01b815281870b6004820152610100816024816001600160a01b0389165afa801561031857600091600091610273575b506001600160801b0392604051986102208a6103ee565b0b8852600f0b6020880152166040860152801561025d5787958691600019019561024a878a61045a565b52610255868961045a565b509050610195565b634e487b7160e01b600052601160045260246000fd5b915050610100813d61010011610310575b816102926101009383610420565b8101031261030b578051916001600160801b038316830361030b5760208201519182600f0b830361030b5760808101518060060b0361030b5760a08101516001600160a01b0381160361030b5760c081015163ffffffff81160361030b5760e001518015150361030b5791906001600160801b03610209565b600080fd5b3d9150610284565b6040513d6000823e3d90fd5b5061010f565b602090604051610339816103ee565b6000815260008382015260006040820152828289010152016100f8565b90506020813d60201161038a575b8161037160209383610420565b8101031261030b57518060020b810361030b57386100cd565b3d9150610364565b81811b86166103a4575b018390610094565b919050600019811461025d57838091019161039c565b9092506020813d6020116103e6575b816103d660209383610420565b8101031261030b5751913861008d565b3d91506103c9565b6060810190811067ffffffffffffffff82111761040a57604052565b634e487b7160e01b600052604160045260246000fd5b90601f8019910116810190811067ffffffffffffffff82111761040a57604052565b67ffffffffffffffff811161040a5760051b60200190565b805182101561046e5760209160051b010190565b634e487b7160e01b600052603260045260246000fdfea2646970667358221220754fa7e7feec3e73eafd1439ad021e4686c2c214de7dbcd44de55036df78ca5064736f6c63430008180033",
+    "sourceMap": "217:1334:115:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;217:1334:115;;;;;;-1:-1:-1;;;;;217:1334:115;;;;;;;;;;;;;;;;;;-1:-1:-1;;;510:48:115;;217:1334;510:48;;217:1334;;510:48;217:1334;510:48;-1:-1:-1;;;;;217:1334:115;;510:48;;;;;;;217:1334;510:48;;;217:1334;620:30;217:1334;665:13;217:1334;680:7;684:3;680:7;;;;-1:-1:-1;;217:1334:115;;-1:-1:-1;;;837:34:115;;217:1334;;;;-1:-1:-1;;;;;217:1334:115;;837:34;;;;;;;217:1334;837:34;;;660:110;217:1334;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;-1:-1:-1;;217:1334:115;;;;;;;;956:13;;;;217:1334;956:13;;;951:592;217:1334;;;951:592;217:1334;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;217:1334:115;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;980:3;971:7;684:3;971:7;;;;;;217:1334;;;1003:17;;999:534;;980:3;;217:1334;956:13;;;999:534;217:1334;-1:-1:-1;217:1334:115;;;;1114:1;217:1334;;;;;;;;;;-1:-1:-1;;217:1334:115;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1242:41:115;;217:1334;;;;1242:41;;217:1334;684:3;217:1334;;;-1:-1:-1;;;;;217:1334:115;;1242:41;;;;;;217:1334;;;1242:41;;;999:534;217:1334;-1:-1:-1;;;;;217:1334:115;;;;;;;:::i;:::-;;;;;;;1344:174;;217:1334;;;1344:174;;217:1334;;;;;;;;;;;;1301:217;;;;;:::i;:::-;;;;;;:::i;:::-;;999:534;;;;217:1334;;;;;;;;;;;;1242:41;;;;684:3;1242:41;;684:3;1242:41;;;;;;684:3;1242:41;;;:::i;:::-;;;217:1334;;;;;;;-1:-1:-1;;;;;217:1334:115;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;217:1334:115;;;;;;;;;;;;;;;;;;;;;;;;1242:41;;-1:-1:-1;;;;;1242:41:115;;217:1334;;;;1242:41;;;-1:-1:-1;1242:41:115;;;217:1334;;;;;;;;;971:7;;;;217:1334;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;837:34;;;217:1334;837:34;;217:1334;837:34;;;;;;217:1334;837:34;;;:::i;:::-;;;217:1334;;;;;;;;;;;;837:34;;;;;;-1:-1:-1;837:34:115;;689:3;217:1334;;;712:17;;708:51;;689:3;217:1334;665:13;;;;708:51;217:1334;;-1:-1:-1;;;217:1334:115;;;;;;;;708:51;;;510:48;;;;217:1334;510:48;;217:1334;510:48;;;;;;217:1334;510:48;;;:::i;:::-;;;217:1334;;;;;510:48;;;;;;;-1:-1:-1;510:48:115;;217:1334;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getPopulatedTicksInWord(address,int16)": "351fb478"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"internalType\":\"int16\",\"name\":\"tickBitmapIndex\",\"type\":\"int16\"}],\"name\":\"getPopulatedTicksInWord\",\"outputs\":[{\"components\":[{\"internalType\":\"int24\",\"name\":\"tick\",\"type\":\"int24\"},{\"internalType\":\"int128\",\"name\":\"liquidityNet\",\"type\":\"int128\"},{\"internalType\":\"uint128\",\"name\":\"liquidityGross\",\"type\":\"uint128\"}],\"internalType\":\"struct ITickLens.PopulatedTick[]\",\"name\":\"populatedTicks\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getPopulatedTicksInWord(address,int16)\":{\"params\":{\"pool\":\"The address of the pool for which to fetch populated tick data\",\"tickBitmapIndex\":\"The index of the word in the tick bitmap for which to parse the bitmap and fetch all the populated ticks\"},\"returns\":{\"populatedTicks\":\"An array of tick data for the given word in the tick bitmap\"}}},\"title\":\"Tick Lens contract\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getPopulatedTicksInWord(address,int16)\":{\"notice\":\"Get all the tick data for the populated ticks from a word of the tick bitmap of a pool\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/lens/TickLens.sol\":\"TickLens\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/\",\":kitchen-dex-core/=lib/kitchen-dex-core/src/\",\":kitchen-precompiles/=lib/precompiles-solidity/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":precompiles-solidity/=lib/precompiles-solidity/\",\":solady/=lib/precompiles-solidity/lib/solady/src/\",\":v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/\",\":v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/\",\":v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/kitchen-dex-core/src/interfaces/IUniswapV3Pool.sol\":{\"keccak256\":\"0x89d3262aac1105665ca6a83ec8e29c951123dd998df9a52a8dd30296642c2425\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://edca9635ed2aefabc9a3e4d3ffddef0d9a2887bb5ca811e3aeda92cd396bd1c9\",\"dweb:/ipfs/QmaXyTQHUkGvoA3SgEamaYzd9yJe5gFqocUEWT9U7dzBeZ\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolActions.sol\":{\"keccak256\":\"0xbd7bd7f2fcf836799776bcba7bbb609f2d90eed906a6066dc35d6882ca981028\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://679371af0f965881cf2b884758ad7c52ed77b358fd2f904b8641922e9b9271a0\",\"dweb:/ipfs/QmYvh2gHdwSUZ3CpvucZUyTcdeTcw28QDE2chFgDz5ww2L\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolDerivedState.sol\":{\"keccak256\":\"0xf44883d8c8c4f696b991260b14911e00fa780f6cc362ac0e5c3f8e05311fc0f0\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://c70d2d25fc283390db58921ff3fb3d53d6a414313f8fbb5b86637413fb798e4e\",\"dweb:/ipfs/QmbQ9YvRgmBjWBFfjbHnBha29myQKha6SrLNPCecSQb6A9\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolEvents.sol\":{\"keccak256\":\"0xdd271e2ff465939e8c38243d1d73f7087b4eb29b8a70d809b1432313017c5a8d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://126fd841c71638f8a90fab57adbf333db633d53708b311ed3919b4a36838297a\",\"dweb:/ipfs/QmQdfe8mnumHiUSGxcPTij8PfbrtRVYQPoQF2hB2nf1hPR\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolImmutables.sol\":{\"keccak256\":\"0x1dd9d63523907585292b947d310c5bb4dcc1d688bc23542f391d72c3c2e6ddfd\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9db6e1b2dac0a8dbf0cebd2013acc16d5b1c640103f8457bb3138b7813497160\",\"dweb:/ipfs/QmbBhz8yJdcKGBzSZmNYyHjoz6ptRRDo1ZArXkQdKnh6gj\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolOwnerActions.sol\":{\"keccak256\":\"0x718143ded6c17349932749a7f0f3caebe89a0644b1c523a73b36d0a6731b9a25\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://2b5200ed3d593ee8fcf334cb225db07378f2e05159d5c530ae095a79073c5d3c\",\"dweb:/ipfs/QmYxHHvDbp7rThBSd2EPnQTiRJZ9oQXJNxwnFDEHiZQrRk\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolState.sol\":{\"keccak256\":\"0x9b5a3b3bc51ab8004cc9d5fd4209aaafc8a702ca3c5769cbda2f0e12a3ac0075\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://f039df2ebe25ec1ed68e6bfc2c28ad5647e417fabc806fba4011e6a6f230e15c\",\"dweb:/ipfs/Qmdt3ge4ts73pabAipSpn9CHommejUuv1CdoT78FvbEmLn\"]},\"src/interfaces/ITickLens.sol\":{\"keccak256\":\"0xffa83f41bff41aa2ddf6bcba857271345810d591dffb073bc57e1a99694ff738\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://aac6304764a2e595195402967431b436275552599a82ecd5bb749fe8847a246e\",\"dweb:/ipfs/QmZ2GSo2sn3u1xtEdEkv4Soe4mkc19VrzJU7e4EZhnRnMM\"]},\"src/lens/TickLens.sol\":{\"keccak256\":\"0x59c5f26283cbf945aee42c1b1013a59e18eda8a344c39d81e7fbaf38027b12dd\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9fad15f8b3f72c26f9f39ddf2d0e03ba62527a099d2ca62e47cc377b5362394a\",\"dweb:/ipfs/QmXmxmPStHriVpryv6zQqJ3qKTBZ99XA2MbJc1DXPyDho1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.24+commit.e11b9ed9"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "pool",
+              "type": "address"
+            },
+            {
+              "internalType": "int16",
+              "name": "tickBitmapIndex",
+              "type": "int16"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPopulatedTicksInWord",
+          "outputs": [
+            {
+              "internalType": "struct ITickLens.PopulatedTick[]",
+              "name": "populatedTicks",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "int24",
+                  "name": "tick",
+                  "type": "int24"
+                },
+                {
+                  "internalType": "int128",
+                  "name": "liquidityNet",
+                  "type": "int128"
+                },
+                {
+                  "internalType": "uint128",
+                  "name": "liquidityGross",
+                  "type": "uint128"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getPopulatedTicksInWord(address,int16)": {
+            "params": {
+              "pool": "The address of the pool for which to fetch populated tick data",
+              "tickBitmapIndex": "The index of the word in the tick bitmap for which to parse the bitmap and fetch all the populated ticks"
+            },
+            "returns": {
+              "populatedTicks": "An array of tick data for the given word in the tick bitmap"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getPopulatedTicksInWord(address,int16)": {
+            "notice": "Get all the tick data for the populated ticks from a word of the tick bitmap of a pool"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/",
+        "kitchen-dex-core/=lib/kitchen-dex-core/src/",
+        "kitchen-precompiles/=lib/precompiles-solidity/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        "precompiles-solidity/=lib/precompiles-solidity/",
+        "solady/=lib/precompiles-solidity/lib/solady/src/",
+        "v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/",
+        "v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/",
+        "v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/lens/TickLens.sol": "TickLens"
+      },
+      "evmVersion": "paris",
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/kitchen-dex-core/src/interfaces/IUniswapV3Pool.sol": {
+        "keccak256": "0x89d3262aac1105665ca6a83ec8e29c951123dd998df9a52a8dd30296642c2425",
+        "urls": [
+          "bzz-raw://edca9635ed2aefabc9a3e4d3ffddef0d9a2887bb5ca811e3aeda92cd396bd1c9",
+          "dweb:/ipfs/QmaXyTQHUkGvoA3SgEamaYzd9yJe5gFqocUEWT9U7dzBeZ"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolActions.sol": {
+        "keccak256": "0xbd7bd7f2fcf836799776bcba7bbb609f2d90eed906a6066dc35d6882ca981028",
+        "urls": [
+          "bzz-raw://679371af0f965881cf2b884758ad7c52ed77b358fd2f904b8641922e9b9271a0",
+          "dweb:/ipfs/QmYvh2gHdwSUZ3CpvucZUyTcdeTcw28QDE2chFgDz5ww2L"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolDerivedState.sol": {
+        "keccak256": "0xf44883d8c8c4f696b991260b14911e00fa780f6cc362ac0e5c3f8e05311fc0f0",
+        "urls": [
+          "bzz-raw://c70d2d25fc283390db58921ff3fb3d53d6a414313f8fbb5b86637413fb798e4e",
+          "dweb:/ipfs/QmbQ9YvRgmBjWBFfjbHnBha29myQKha6SrLNPCecSQb6A9"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolEvents.sol": {
+        "keccak256": "0xdd271e2ff465939e8c38243d1d73f7087b4eb29b8a70d809b1432313017c5a8d",
+        "urls": [
+          "bzz-raw://126fd841c71638f8a90fab57adbf333db633d53708b311ed3919b4a36838297a",
+          "dweb:/ipfs/QmQdfe8mnumHiUSGxcPTij8PfbrtRVYQPoQF2hB2nf1hPR"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolImmutables.sol": {
+        "keccak256": "0x1dd9d63523907585292b947d310c5bb4dcc1d688bc23542f391d72c3c2e6ddfd",
+        "urls": [
+          "bzz-raw://9db6e1b2dac0a8dbf0cebd2013acc16d5b1c640103f8457bb3138b7813497160",
+          "dweb:/ipfs/QmbBhz8yJdcKGBzSZmNYyHjoz6ptRRDo1ZArXkQdKnh6gj"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolOwnerActions.sol": {
+        "keccak256": "0x718143ded6c17349932749a7f0f3caebe89a0644b1c523a73b36d0a6731b9a25",
+        "urls": [
+          "bzz-raw://2b5200ed3d593ee8fcf334cb225db07378f2e05159d5c530ae095a79073c5d3c",
+          "dweb:/ipfs/QmYxHHvDbp7rThBSd2EPnQTiRJZ9oQXJNxwnFDEHiZQrRk"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolState.sol": {
+        "keccak256": "0x9b5a3b3bc51ab8004cc9d5fd4209aaafc8a702ca3c5769cbda2f0e12a3ac0075",
+        "urls": [
+          "bzz-raw://f039df2ebe25ec1ed68e6bfc2c28ad5647e417fabc806fba4011e6a6f230e15c",
+          "dweb:/ipfs/Qmdt3ge4ts73pabAipSpn9CHommejUuv1CdoT78FvbEmLn"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/ITickLens.sol": {
+        "keccak256": "0xffa83f41bff41aa2ddf6bcba857271345810d591dffb073bc57e1a99694ff738",
+        "urls": [
+          "bzz-raw://aac6304764a2e595195402967431b436275552599a82ecd5bb749fe8847a246e",
+          "dweb:/ipfs/QmZ2GSo2sn3u1xtEdEkv4Soe4mkc19VrzJU7e4EZhnRnMM"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/lens/TickLens.sol": {
+        "keccak256": "0x59c5f26283cbf945aee42c1b1013a59e18eda8a344c39d81e7fbaf38027b12dd",
+        "urls": [
+          "bzz-raw://9fad15f8b3f72c26f9f39ddf2d0e03ba62527a099d2ca62e47cc377b5362394a",
+          "dweb:/ipfs/QmXmxmPStHriVpryv6zQqJ3qKTBZ99XA2MbJc1DXPyDho1"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "id": 115
+}

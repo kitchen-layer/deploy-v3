@@ -1,1 +1,659 @@
-{"abi":[{"type":"constructor","inputs":[],"stateMutability":"nonpayable"},{"type":"function","name":"createLockToken","inputs":[{"name":"beneficiary","type":"address","internalType":"address"},{"name":"duration","type":"uint256","internalType":"uint256"},{"name":"token","type":"address","internalType":"address"},{"name":"tokenId","type":"uint256","internalType":"uint256"}],"outputs":[],"stateMutability":"nonpayable"},{"type":"function","name":"getLocksForBeneficiary","inputs":[{"name":"beneficiary","type":"address","internalType":"address"}],"outputs":[{"name":"","type":"tuple","internalType":"struct SimpleNFTTimelock.TimeLock","components":[{"name":"token","type":"address","internalType":"contract IERC721"},{"name":"tokenId","type":"uint256","internalType":"uint256"},{"name":"releaseTime","type":"uint256","internalType":"uint256"},{"name":"released","type":"bool","internalType":"bool"}]}],"stateMutability":"view"},{"type":"function","name":"isNftLocked","inputs":[{"name":"beneficiary","type":"address","internalType":"address"}],"outputs":[{"name":"","type":"bool","internalType":"bool"}],"stateMutability":"view"},{"type":"function","name":"release","inputs":[],"outputs":[],"stateMutability":"nonpayable"},{"type":"function","name":"timeLocks","inputs":[{"name":"","type":"address","internalType":"address"}],"outputs":[{"name":"token","type":"address","internalType":"contract IERC721"},{"name":"tokenId","type":"uint256","internalType":"uint256"},{"name":"releaseTime","type":"uint256","internalType":"uint256"},{"name":"released","type":"bool","internalType":"bool"}],"stateMutability":"view"},{"type":"event","name":"LockAdded","inputs":[{"name":"beneficiary","type":"address","indexed":true,"internalType":"address"},{"name":"tokenId","type":"uint256","indexed":false,"internalType":"uint256"},{"name":"releaseTime","type":"uint256","indexed":false,"internalType":"uint256"}],"anonymous":false},{"type":"event","name":"Locked","inputs":[{"name":"beneficiary","type":"address","indexed":true,"internalType":"address"},{"name":"token","type":"address","indexed":false,"internalType":"address"},{"name":"tokenId","type":"uint256","indexed":false,"internalType":"uint256"},{"name":"releaseTime","type":"uint256","indexed":false,"internalType":"uint256"}],"anonymous":false},{"type":"event","name":"Released","inputs":[{"name":"beneficiary","type":"address","indexed":true,"internalType":"address"},{"name":"token","type":"address","indexed":false,"internalType":"address"},{"name":"tokenId","type":"uint256","indexed":false,"internalType":"uint256"}],"anonymous":false},{"type":"error","name":"AlreadyReleased","inputs":[]},{"type":"error","name":"InvalidLockIndex","inputs":[]},{"type":"error","name":"LockAlreadyExists","inputs":[]},{"type":"error","name":"LockPeriodNotExpired","inputs":[]},{"type":"error","name":"NullAddress","inputs":[]},{"type":"error","name":"ReentrancyGuardReentrantCall","inputs":[]},{"type":"error","name":"TransferFailed","inputs":[]},{"type":"error","name":"ZeroDuration","inputs":[]},{"type":"error","name":"ZeroTokenId","inputs":[]}],"bytecode":{"object":"0x6080806040523461001a5760015f556105b6908161001f8239f35b5f80fdfe6080604081815260049081361015610015575f80fd5b5f925f3560e01c908163475ce5921461046157508063526dbb361461040a5780637f76b223146103a957806386d1a69f146102465763e4ca961014610058575f80fd5b3461024257608036600319011261024257610071610505565b90602435926044359160018060a01b0380841680940361023e57806064359561009861055f565b169586885260016020526002838920015461022f578615610220578415610220578015610211578515610202574201928342116101ef578790853b156101eb5783516323b872dd60e01b81523391810191825230602083015260408201889052908290829081906060010381838a5af180156101e15790889392916101be575b509160037f967ad762aa9070ada8db64577288e214771e89667066ae38e8750cb8a86c542997928594606098979651916101518361051b565b888352602083019086825287808501938a85528c86019781895281526001602052209351166bffffffffffffffffffffffff60a01b845416178355516001830155516002820155019051151560ff8019835416911617905581519384526020840152820152a26001815580f35b6101cd9192969594935061054b565b6101dd579091928590875f610118565b8680fd5b84513d84823e3d90fd5b5080fd5b634e487b7160e01b885260119052602487fd5b505051631fed7fc560e01b8152fd5b50505163346ab43760e11b8152fd5b50505163e99d5ac560e01b8152fd5b50505163748d150960e01b8152fd5b5f80fd5b8280fd5b5082903461023e575f36600319011261023e5761026161055f565b335f526001602052805f20908051936102798561051b565b60018060a01b03908184541686526001840154936020870194855260ff600360028301549283878b015201541615156060880152421061039b5781865116908451823b1561023e5784516323b872dd60e01b8152309281019283523360208401526040830191909152915f9183919082908490829060600103925af180156103915761035c575b507f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529293943386526001602052856003848220828155826001820155826002820155015551169251815193845260208401523392a26001815580f35b7f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529394506103899061054b565b5f9392610300565b83513d5f823e3d90fd5b8251633d65368d60e21b8152fd5b503461023e57602036600319011261023e576080906001600160a01b0390816103d0610505565b165f526001602052805f20918254169160018101549160ff6003600284015493015416928151948552602085015283015215156060820152f35b503461023e57602036600319011261023e576020906001600160a01b0361042f610505565b165f5260018252805f2090600282015415159182610451575b50519015158152f35b6003015460ff1615915083610448565b823461023e57602036600319011261023e576080915f6060610481610505565b9261048b8161051b565b8281528260208201528285820152015260018060a01b038091165f526001602052815f20918051916104bc8361051b565b83541692838352600181015460208401908152606060ff600360028501549486880195865201541694019315158452825194855251602085015251908301525115156060820152f35b600435906001600160a01b038216820361023e57565b6080810190811067ffffffffffffffff82111761053757604052565b634e487b7160e01b5f52604160045260245ffd5b67ffffffffffffffff811161053757604052565b60025f541461056e5760025f55565b604051633ee5aeb560e01b8152600490fdfea26469706673582212205d79aa689c2c030852169846e6453e93efd7b28faeb7cdc242ffccccbe94897a64736f6c63430008180033","sourceMap":"340:2906:80:-:0;;;;;;;1857:1:68;2061:21;1857:1;340:2906:80;;;;;;;;;;","linkReferences":{}},"deployedBytecode":{"object":"0x6080604081815260049081361015610015575f80fd5b5f925f3560e01c908163475ce5921461046157508063526dbb361461040a5780637f76b223146103a957806386d1a69f146102465763e4ca961014610058575f80fd5b3461024257608036600319011261024257610071610505565b90602435926044359160018060a01b0380841680940361023e57806064359561009861055f565b169586885260016020526002838920015461022f578615610220578415610220578015610211578515610202574201928342116101ef578790853b156101eb5783516323b872dd60e01b81523391810191825230602083015260408201889052908290829081906060010381838a5af180156101e15790889392916101be575b509160037f967ad762aa9070ada8db64577288e214771e89667066ae38e8750cb8a86c542997928594606098979651916101518361051b565b888352602083019086825287808501938a85528c86019781895281526001602052209351166bffffffffffffffffffffffff60a01b845416178355516001830155516002820155019051151560ff8019835416911617905581519384526020840152820152a26001815580f35b6101cd9192969594935061054b565b6101dd579091928590875f610118565b8680fd5b84513d84823e3d90fd5b5080fd5b634e487b7160e01b885260119052602487fd5b505051631fed7fc560e01b8152fd5b50505163346ab43760e11b8152fd5b50505163e99d5ac560e01b8152fd5b50505163748d150960e01b8152fd5b5f80fd5b8280fd5b5082903461023e575f36600319011261023e5761026161055f565b335f526001602052805f20908051936102798561051b565b60018060a01b03908184541686526001840154936020870194855260ff600360028301549283878b015201541615156060880152421061039b5781865116908451823b1561023e5784516323b872dd60e01b8152309281019283523360208401526040830191909152915f9183919082908490829060600103925af180156103915761035c575b507f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529293943386526001602052856003848220828155826001820155826002820155015551169251815193845260208401523392a26001815580f35b7f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529394506103899061054b565b5f9392610300565b83513d5f823e3d90fd5b8251633d65368d60e21b8152fd5b503461023e57602036600319011261023e576080906001600160a01b0390816103d0610505565b165f526001602052805f20918254169160018101549160ff6003600284015493015416928151948552602085015283015215156060820152f35b503461023e57602036600319011261023e576020906001600160a01b0361042f610505565b165f5260018252805f2090600282015415159182610451575b50519015158152f35b6003015460ff1615915083610448565b823461023e57602036600319011261023e576080915f6060610481610505565b9261048b8161051b565b8281528260208201528285820152015260018060a01b038091165f526001602052815f20918051916104bc8361051b565b83541692838352600181015460208401908152606060ff600360028501549486880195865201541694019315158452825194855251602085015251908301525115156060820152f35b600435906001600160a01b038216820361023e57565b6080810190811067ffffffffffffffff82111761053757604052565b634e487b7160e01b5f52604160045260245ffd5b67ffffffffffffffff811161053757604052565b60025f541461056e5760025f55565b604051633ee5aeb560e01b8152600490fdfea26469706673582212205d79aa689c2c030852169846e6453e93efd7b28faeb7cdc242ffccccbe94897a64736f6c63430008180033","sourceMap":"340:2906:80:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;340:2906:80;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;2466:103:68;;;:::i;:::-;340:2906:80;;;;;;;;1433:34;340:2906;;;1433:34;340:2906;1429:96;;1538:25;;1534:51;;1599:19;;1595:45;;1654:13;;1650:40;;1704:12;;1700:38;;1771:15;340:2906;1771:15;;;340:2906;;;1810:63;;;;;;;340:2906;;-1:-1:-1;;;1810:63:80;;1838:10;1810:63;;;340:2906;;;1858:4;340:2906;;;;;;;;;;;;;;;;;;;1810:63;;;;;;;;;;;;;;;;;340:2906;;;;2075:48;340:2906;;;;;;;;;;;;;:::i;:::-;;;;;1922:94;;340:2906;;;;1922:94;;;;340:2906;;;;1922:94;;;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;1433:34;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2075:48;340:2906;;;;;1810:63;;;;;;;;;;:::i;:::-;340:2906;;1810:63;;;;;;;;;340:2906;;;;1810:63;340:2906;;;;;;;;;1810:63;340:2906;;;;-1:-1:-1;;;340:2906:80;;;;;;;;1700:38;-1:-1:-1;;340:2906:80;-1:-1:-1;;;1725:13:80;;;1650:40;-1:-1:-1;;340:2906:80;-1:-1:-1;;;1676:14:80;;;1595:45;-1:-1:-1;;340:2906:80;-1:-1:-1;;;1627:13:80;;;1429:96;-1:-1:-1;;340:2906:80;-1:-1:-1;;;1495:19:80;;;340:2906;;;;;;;;;;;;;;;;;-1:-1:-1;;340:2906:80;;;;2466:103:68;;:::i;:::-;2295:10:80;340:2906;;2285:9;340:2906;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;2285:9;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2321:15;:34;2317:69;;340:2906;;;;;;;2397:82;;;;;340:2906;;-1:-1:-1;;;2397:82:80;;2447:4;2397:82;;;340:2906;;;2295:10;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;2397:82;;;;;;;;;;340:2906;2295:10;2534:55;2295:10;;;;340:2906;;2285:9;340:2906;;;;;;;;;;;2285:9;340:2906;;;;;;;;;;;;;;;;;;;;;;;2295:10;2534:55;;2285:9;340:2906;;;;2397:82;2534:55;2397:82;;;;;;:::i;:::-;340:2906;2397:82;;;;;340:2906;;;;;;;;;2317:69;340:2906;;-1:-1:-1;;;2364:22:80;;;340:2906;;;;;;;-1:-1:-1;;340:2906:80;;;;;;-1:-1:-1;;;;;340:2906:80;;;;:::i;:::-;;;;581:45;340:2906;;;;;;;;;581:45;;;;340:2906;581:45;340:2906;581:45;;;;340:2906;581:45;;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;340:2906:80;;;;;;-1:-1:-1;;;;;340:2906:80;;:::i;:::-;;;;3162:9;340:2906;;;;;3162:34;;;;340:2906;3162:39;;:75;;;;340:2906;;;;;;;;;3162:75;3206:31;;340:2906;;;3205:32;;-1:-1:-1;3162:75:80;;;340:2906;;;;;;;-1:-1:-1;;340:2906:80;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;2865:9;340:2906;;;;;;;;;;;;:::i;:::-;;;;;;;;2865:9;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;340:2906:80;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;2575:307:68:-;1899:1;2702:7;340:2906:80;2702:18:68;2698:86;;1899:1;2702:7;340:2906:80;2575:307:68:o;2698:86::-;340:2906:80;;-1:-1:-1;;;2743:30:68;;;;","linkReferences":{}},"methodIdentifiers":{"createLockToken(address,uint256,address,uint256)":"e4ca9610","getLocksForBeneficiary(address)":"475ce592","isNftLocked(address)":"526dbb36","release()":"86d1a69f","timeLocks(address)":"7f76b223"},"rawMetadata":"{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"AlreadyReleased\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidLockIndex\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"LockAlreadyExists\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"LockPeriodNotExpired\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NullAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ReentrancyGuardReentrantCall\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroDuration\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroTokenId\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"}],\"name\":\"LockAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"}],\"name\":\"Locked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Released\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"createLockToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"getLocksForBeneficiary\",\"outputs\":[{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"released\",\"type\":\"bool\"}],\"internalType\":\"struct SimpleNFTTimelock.TimeLock\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"isNftLocked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"release\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"timeLocks\",\"outputs\":[{\"internalType\":\"contract IERC721\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"released\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Contract that locks tokens/ETH for a specified duration. Implements secure withdrawal patterns and reentrancy protection.\",\"errors\":{\"ReentrancyGuardReentrantCall()\":[{\"details\":\"Unauthorized reentrant call.\"}]},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Constructor initializes the contract with the deployer as owner\"},\"getLocksForBeneficiary(address)\":{\"details\":\"Returns all timelocks for a beneficiary\",\"params\":{\"beneficiary\":\"Address to query locks for\"},\"returns\":{\"_0\":\"TimeLock structs\"}},\"isNftLocked(address)\":{\"details\":\"Returns the number of timelocks for a beneficiary\",\"params\":{\"beneficiary\":\"Address to query locks for\"},\"returns\":{\"_0\":\"uint256 Number of timelocks\"}},\"release()\":{\"details\":\"Releases locked NFT if lock period has expired\"}},\"title\":\"SimpleTimelock\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/precompiles-solidity/src/timelock/nftTimelock.sol\":\"SimpleNFTTimelock\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/\",\":kitchen-dex-core/=lib/kitchen-dex-core/src/\",\":kitchen-precompiles/=lib/precompiles-solidity/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":precompiles-solidity/=lib/precompiles-solidity/\",\":solady/=lib/precompiles-solidity/lib/solady/src/\",\":v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/\",\":v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/\",\":v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol\":{\"keccak256\":\"0xc4d7ebf63eb2f6bf3fee1b6c0ee775efa9f31b4843a5511d07eea147e212932d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://01c66a2fad66bc710db7510419a7eee569b40b67cd9f01b70a3fc90d6f76c03b\",\"dweb:/ipfs/QmT1CjJZq4eTNA4nu8E9ZrWfaZu6ReUsDbjcK8DbEFqwx5\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x5dc63d1c6a12fe1b17793e1745877b2fcbe1964c3edfd0a482fac21ca8f18261\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6b7f97c5960a50fd1822cb298551ffc908e37b7893a68d6d08bce18a11cb0f11\",\"dweb:/ipfs/QmQQvxBytoY1eBt3pRQDmvH2hZ2yjhs12YqVfzGm7KSURq\"]},\"lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a\",\"dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621\",\"dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL\"]},\"lib/precompiles-solidity/src/timelock/nftTimelock.sol\":{\"keccak256\":\"0x5b4501ec9d0fe0c2d9dd15eac01fbf6975470c8ae85f186722d23755f92fa950\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0fa31748260c2878cfce8cba140a1fe3bff27e2b65248f69cfe84c8ae8460d9\",\"dweb:/ipfs/QmXoRGsFmeLjWxRL7Erm5TbdJBEC1xUnbMyy9FJiEsHAJL\"]}},\"version\":1}","metadata":{"compiler":{"version":"0.8.24+commit.e11b9ed9"},"language":"Solidity","output":{"abi":[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"type":"error","name":"AlreadyReleased"},{"inputs":[],"type":"error","name":"InvalidLockIndex"},{"inputs":[],"type":"error","name":"LockAlreadyExists"},{"inputs":[],"type":"error","name":"LockPeriodNotExpired"},{"inputs":[],"type":"error","name":"NullAddress"},{"inputs":[],"type":"error","name":"ReentrancyGuardReentrantCall"},{"inputs":[],"type":"error","name":"TransferFailed"},{"inputs":[],"type":"error","name":"ZeroDuration"},{"inputs":[],"type":"error","name":"ZeroTokenId"},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address","indexed":true},{"internalType":"uint256","name":"tokenId","type":"uint256","indexed":false},{"internalType":"uint256","name":"releaseTime","type":"uint256","indexed":false}],"type":"event","name":"LockAdded","anonymous":false},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address","indexed":true},{"internalType":"address","name":"token","type":"address","indexed":false},{"internalType":"uint256","name":"tokenId","type":"uint256","indexed":false},{"internalType":"uint256","name":"releaseTime","type":"uint256","indexed":false}],"type":"event","name":"Locked","anonymous":false},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address","indexed":true},{"internalType":"address","name":"token","type":"address","indexed":false},{"internalType":"uint256","name":"tokenId","type":"uint256","indexed":false}],"type":"event","name":"Released","anonymous":false},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address"},{"internalType":"uint256","name":"duration","type":"uint256"},{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"stateMutability":"nonpayable","type":"function","name":"createLockToken"},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"stateMutability":"view","type":"function","name":"getLocksForBeneficiary","outputs":[{"internalType":"struct SimpleNFTTimelock.TimeLock","name":"","type":"tuple","components":[{"internalType":"contract IERC721","name":"token","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"uint256","name":"releaseTime","type":"uint256"},{"internalType":"bool","name":"released","type":"bool"}]}]},{"inputs":[{"internalType":"address","name":"beneficiary","type":"address"}],"stateMutability":"view","type":"function","name":"isNftLocked","outputs":[{"internalType":"bool","name":"","type":"bool"}]},{"inputs":[],"stateMutability":"nonpayable","type":"function","name":"release"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","name":"timeLocks","outputs":[{"internalType":"contract IERC721","name":"token","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"uint256","name":"releaseTime","type":"uint256"},{"internalType":"bool","name":"released","type":"bool"}]}],"devdoc":{"kind":"dev","methods":{"constructor":{"details":"Constructor initializes the contract with the deployer as owner"},"getLocksForBeneficiary(address)":{"details":"Returns all timelocks for a beneficiary","params":{"beneficiary":"Address to query locks for"},"returns":{"_0":"TimeLock structs"}},"isNftLocked(address)":{"details":"Returns the number of timelocks for a beneficiary","params":{"beneficiary":"Address to query locks for"},"returns":{"_0":"uint256 Number of timelocks"}},"release()":{"details":"Releases locked NFT if lock period has expired"}},"version":1},"userdoc":{"kind":"user","methods":{},"version":1}},"settings":{"remappings":["@openzeppelin/=lib/openzeppelin-contracts/","ds-test/=lib/forge-std/lib/ds-test/src/","erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/","forge-std/=lib/forge-std/src/","halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/","kitchen-dex-core/=lib/kitchen-dex-core/src/","kitchen-precompiles/=lib/precompiles-solidity/src/","openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/","precompiles-solidity/=lib/precompiles-solidity/","solady/=lib/precompiles-solidity/lib/solady/src/","v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/","v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/","v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/"],"optimizer":{"enabled":true,"runs":200},"metadata":{"bytecodeHash":"ipfs"},"compilationTarget":{"lib/precompiles-solidity/src/timelock/nftTimelock.sol":"SimpleNFTTimelock"},"evmVersion":"cancun","libraries":{},"viaIR":true},"sources":{"lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol":{"keccak256":"0xc4d7ebf63eb2f6bf3fee1b6c0ee775efa9f31b4843a5511d07eea147e212932d","urls":["bzz-raw://01c66a2fad66bc710db7510419a7eee569b40b67cd9f01b70a3fc90d6f76c03b","dweb:/ipfs/QmT1CjJZq4eTNA4nu8E9ZrWfaZu6ReUsDbjcK8DbEFqwx5"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol":{"keccak256":"0x5dc63d1c6a12fe1b17793e1745877b2fcbe1964c3edfd0a482fac21ca8f18261","urls":["bzz-raw://6b7f97c5960a50fd1822cb298551ffc908e37b7893a68d6d08bce18a11cb0f11","dweb:/ipfs/QmQQvxBytoY1eBt3pRQDmvH2hZ2yjhs12YqVfzGm7KSURq"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol":{"keccak256":"0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3","urls":["bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a","dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA"],"license":"MIT"},"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol":{"keccak256":"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8","urls":["bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621","dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL"],"license":"MIT"},"lib/precompiles-solidity/src/timelock/nftTimelock.sol":{"keccak256":"0x5b4501ec9d0fe0c2d9dd15eac01fbf6975470c8ae85f186722d23755f92fa950","urls":["bzz-raw://a0fa31748260c2878cfce8cba140a1fe3bff27e2b65248f69cfe84c8ae8460d9","dweb:/ipfs/QmXoRGsFmeLjWxRL7Erm5TbdJBEC1xUnbMyy9FJiEsHAJL"],"license":"MIT"}},"version":1},"id":80}
+{
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "createLockToken",
+      "inputs": [
+        {
+          "name": "beneficiary",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "duration",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "token",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getLocksForBeneficiary",
+      "inputs": [
+        {
+          "name": "beneficiary",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct SimpleNFTTimelock.TimeLock",
+          "components": [
+            {
+              "name": "token",
+              "type": "address",
+              "internalType": "contract IERC721"
+            },
+            {
+              "name": "tokenId",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "releaseTime",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "released",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "isNftLocked",
+      "inputs": [
+        {
+          "name": "beneficiary",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "release",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "timeLocks",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "token",
+          "type": "address",
+          "internalType": "contract IERC721"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "releaseTime",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "released",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "LockAdded",
+      "inputs": [
+        {
+          "name": "beneficiary",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "releaseTime",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Locked",
+      "inputs": [
+        {
+          "name": "beneficiary",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "token",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "releaseTime",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Released",
+      "inputs": [
+        {
+          "name": "beneficiary",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "token",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AlreadyReleased",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidLockIndex",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "LockAlreadyExists",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "LockPeriodNotExpired",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NullAddress",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ReentrancyGuardReentrantCall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "TransferFailed",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ZeroDuration",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ZeroTokenId",
+      "inputs": []
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080806040523461001b5760016000556105be90816100218239f35b600080fdfe608060408181526004908136101561001657600080fd5b600092833560e01c908163475ce5921461046457508063526dbb361461040c5780637f76b223146103a957806386d1a69f1461024a5763e4ca96101461005b57600080fd5b3461024657608036600319011261024657610074610509565b90602435926044359160018060a01b0380841680940361024157806064359561009b610565565b1695868852600160205260028389200154610232578615610223578415610223578015610214578515610205574201928342116101f2578790853b156101ee5783516323b872dd60e01b81523391810191825230602083015260408201889052908290829081906060010381838a5af180156101e45790889392916101c1575b509160037f967ad762aa9070ada8db64577288e214771e89667066ae38e8750cb8a86c542997928594606098979651916101548361051f565b888352602083019086825287808501938a85528c86019781895281526001602052209351166bffffffffffffffffffffffff60a01b845416178355516001830155516002820155019051151560ff8019835416911617905581519384526020840152820152a26001815580f35b6101d091929695949350610551565b6101e0579091928590873861011b565b8680fd5b84513d84823e3d90fd5b5080fd5b634e487b7160e01b885260119052602487fd5b505051631fed7fc560e01b8152fd5b50505163346ab43760e11b8152fd5b50505163e99d5ac560e01b8152fd5b50505163748d150960e01b8152fd5b600080fd5b8280fd5b508290346101ee57816003193601126101ee57610265610565565b33825260016020528082209080519361027d8561051f565b60018060a01b03908184541686526001840154936020870194855260ff600360028301549283878b015201541615156060880152421061039b5781865116845191813b156101e05784516323b872dd60e01b81523091810191825233602083015260408201939093528691839182908490829060600103925af180156103915761035e575b507f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529293943386526001602052856003848220828155826001820155826002820155015551169251815193845260208401523392a26001815580f35b9361038a7f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529495610551565b9392610302565b83513d87823e3d90fd5b8251633d65368d60e21b8152fd5b8382346101ee5760203660031901126101ee576080916001600160a01b0391908190836103d4610509565b168152600160205220918254169160018101549160ff6003600284015493015416928151948552602085015283015215156060820152f35b8382346101ee5760203660031901126101ee5760209181906001600160a01b03610434610509565b168152600184522090600282015415159182610454575b50519015158152f35b6003015460ff161591508361044b565b828591346102465760203660031901126102465781836080946060610487610509565b946104918161051f565b8281528260208201528285820152015260018060a01b038093168152600160205220918051916104c08361051f565b83541692838352600181015460208401908152606060ff600360028501549486880195865201541694019315158452825194855251602085015251908301525115156060820152f35b600435906001600160a01b038216820361024157565b6080810190811067ffffffffffffffff82111761053b57604052565b634e487b7160e01b600052604160045260246000fd5b67ffffffffffffffff811161053b57604052565b600260005414610576576002600055565b604051633ee5aeb560e01b8152600490fdfea264697066735822122081a2f9a795e113f558fb83e3ae93d57db3a806ba11ff460f1aeca6134dd3080764736f6c63430008180033",
+    "sourceMap": "340:2906:81:-:0;;;;;;;1857:1:69;2061:21;1857:1;340:2906:81;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060408181526004908136101561001657600080fd5b600092833560e01c908163475ce5921461046457508063526dbb361461040c5780637f76b223146103a957806386d1a69f1461024a5763e4ca96101461005b57600080fd5b3461024657608036600319011261024657610074610509565b90602435926044359160018060a01b0380841680940361024157806064359561009b610565565b1695868852600160205260028389200154610232578615610223578415610223578015610214578515610205574201928342116101f2578790853b156101ee5783516323b872dd60e01b81523391810191825230602083015260408201889052908290829081906060010381838a5af180156101e45790889392916101c1575b509160037f967ad762aa9070ada8db64577288e214771e89667066ae38e8750cb8a86c542997928594606098979651916101548361051f565b888352602083019086825287808501938a85528c86019781895281526001602052209351166bffffffffffffffffffffffff60a01b845416178355516001830155516002820155019051151560ff8019835416911617905581519384526020840152820152a26001815580f35b6101d091929695949350610551565b6101e0579091928590873861011b565b8680fd5b84513d84823e3d90fd5b5080fd5b634e487b7160e01b885260119052602487fd5b505051631fed7fc560e01b8152fd5b50505163346ab43760e11b8152fd5b50505163e99d5ac560e01b8152fd5b50505163748d150960e01b8152fd5b600080fd5b8280fd5b508290346101ee57816003193601126101ee57610265610565565b33825260016020528082209080519361027d8561051f565b60018060a01b03908184541686526001840154936020870194855260ff600360028301549283878b015201541615156060880152421061039b5781865116845191813b156101e05784516323b872dd60e01b81523091810191825233602083015260408201939093528691839182908490829060600103925af180156103915761035e575b507f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529293943386526001602052856003848220828155826001820155826002820155015551169251815193845260208401523392a26001815580f35b9361038a7f2d87480f50083e2b2759522a8fdda59802650a8055e609a7772cf70c07748f529495610551565b9392610302565b83513d87823e3d90fd5b8251633d65368d60e21b8152fd5b8382346101ee5760203660031901126101ee576080916001600160a01b0391908190836103d4610509565b168152600160205220918254169160018101549160ff6003600284015493015416928151948552602085015283015215156060820152f35b8382346101ee5760203660031901126101ee5760209181906001600160a01b03610434610509565b168152600184522090600282015415159182610454575b50519015158152f35b6003015460ff161591508361044b565b828591346102465760203660031901126102465781836080946060610487610509565b946104918161051f565b8281528260208201528285820152015260018060a01b038093168152600160205220918051916104c08361051f565b83541692838352600181015460208401908152606060ff600360028501549486880195865201541694019315158452825194855251602085015251908301525115156060820152f35b600435906001600160a01b038216820361024157565b6080810190811067ffffffffffffffff82111761053b57604052565b634e487b7160e01b600052604160045260246000fd5b67ffffffffffffffff811161053b57604052565b600260005414610576576002600055565b604051633ee5aeb560e01b8152600490fdfea264697066735822122081a2f9a795e113f558fb83e3ae93d57db3a806ba11ff460f1aeca6134dd3080764736f6c63430008180033",
+    "sourceMap": "340:2906:81:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;340:2906:81;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;2466:103:69;;;:::i;:::-;340:2906:81;;;;;;;;1433:34;340:2906;;;1433:34;340:2906;1429:96;;1538:25;;1534:51;;1599:19;;1595:45;;1654:13;;1650:40;;1704:12;;1700:38;;1771:15;340:2906;1771:15;;;340:2906;;;1810:63;;;;;;;340:2906;;-1:-1:-1;;;1810:63:81;;1838:10;1810:63;;;340:2906;;;1858:4;340:2906;;;;;;;;;;;;;;;;;;;1810:63;;;;;;;;;;;;;;;;;340:2906;;;;2075:48;340:2906;;;;;;;;;;;;;:::i;:::-;;;;;1922:94;;340:2906;;;;1922:94;;;;340:2906;;;;1922:94;;;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;1433:34;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2075:48;340:2906;;;;;1810:63;;;;;;;;;;:::i;:::-;340:2906;;1810:63;;;;;;;;;340:2906;;;;1810:63;340:2906;;;;;;;;;1810:63;340:2906;;;;-1:-1:-1;;;340:2906:81;;;;;;;;1700:38;-1:-1:-1;;340:2906:81;-1:-1:-1;;;1725:13:81;;;1650:40;-1:-1:-1;;340:2906:81;-1:-1:-1;;;1676:14:81;;;1595:45;-1:-1:-1;;340:2906:81;-1:-1:-1;;;1627:13:81;;;1429:96;-1:-1:-1;;340:2906:81;-1:-1:-1;;;1495:19:81;;;340:2906;;;;;;;;;;;;;;;;;;;;;;;2466:103:69;;:::i;:::-;2295:10:81;340:2906;;2285:9;340:2906;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;2285:9;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2321:15;:34;2317:69;;340:2906;;;;;;2397:82;;;;;;340:2906;;-1:-1:-1;;;2397:82:81;;2447:4;2397:82;;;340:2906;;;2295:10;340:2906;;;;;;;;;;;;;;;;;;;;;;;2397:82;;;;;;;;;;340:2906;2295:10;2534:55;2295:10;;;;340:2906;;2285:9;340:2906;;;;;;;;;;;2285:9;340:2906;;;;;;;;;;;;;;;;;;;;;;;2295:10;2534:55;;2285:9;340:2906;;;;2397:82;;;2534:55;2397:82;;;:::i;:::-;;;;;;340:2906;;;;;;;;;2317:69;340:2906;;-1:-1:-1;;;2364:22:81;;;340:2906;;;;;;;;-1:-1:-1;;340:2906:81;;;;;;-1:-1:-1;;;;;340:2906:81;;;;;;;:::i;:::-;;;;581:45;340:2906;;;;;;;581:45;;;;340:2906;581:45;340:2906;581:45;;;;340:2906;581:45;;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;340:2906:81;;;;;;;;-1:-1:-1;;;;;340:2906:81;;:::i;:::-;;;;3162:9;340:2906;;;3162:34;;;;340:2906;3162:39;;:75;;;;340:2906;;;;;;;;;3162:75;3206:31;;340:2906;;;3205:32;;-1:-1:-1;3162:75:81;;;340:2906;;;;;;;;;-1:-1:-1;;340:2906:81;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;2865:9;340:2906;;;;;;;;;;:::i;:::-;;;;;;;;2865:9;340:2906;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;340:2906:81;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;2575:307:69:-;1899:1;2702:7;340:2906:81;2702:18:69;2698:86;;1899:1;2702:7;340:2906:81;2575:307:69:o;2698:86::-;340:2906:81;;-1:-1:-1;;;2743:30:69;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "createLockToken(address,uint256,address,uint256)": "e4ca9610",
+    "getLocksForBeneficiary(address)": "475ce592",
+    "isNftLocked(address)": "526dbb36",
+    "release()": "86d1a69f",
+    "timeLocks(address)": "7f76b223"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"AlreadyReleased\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidLockIndex\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"LockAlreadyExists\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"LockPeriodNotExpired\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NullAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ReentrancyGuardReentrantCall\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroDuration\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroTokenId\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"}],\"name\":\"LockAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"}],\"name\":\"Locked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Released\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"duration\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"createLockToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"getLocksForBeneficiary\",\"outputs\":[{\"components\":[{\"internalType\":\"contract IERC721\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"released\",\"type\":\"bool\"}],\"internalType\":\"struct SimpleNFTTimelock.TimeLock\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"}],\"name\":\"isNftLocked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"release\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"timeLocks\",\"outputs\":[{\"internalType\":\"contract IERC721\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"releaseTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"released\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Contract that locks tokens/ETH for a specified duration. Implements secure withdrawal patterns and reentrancy protection.\",\"errors\":{\"ReentrancyGuardReentrantCall()\":[{\"details\":\"Unauthorized reentrant call.\"}]},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Constructor initializes the contract with the deployer as owner\"},\"getLocksForBeneficiary(address)\":{\"details\":\"Returns all timelocks for a beneficiary\",\"params\":{\"beneficiary\":\"Address to query locks for\"},\"returns\":{\"_0\":\"TimeLock structs\"}},\"isNftLocked(address)\":{\"details\":\"Returns the number of timelocks for a beneficiary\",\"params\":{\"beneficiary\":\"Address to query locks for\"},\"returns\":{\"_0\":\"uint256 Number of timelocks\"}},\"release()\":{\"details\":\"Releases locked NFT if lock period has expired\"}},\"title\":\"SimpleTimelock\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/precompiles-solidity/src/timelock/nftTimelock.sol\":\"SimpleNFTTimelock\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/\",\":kitchen-dex-core/=lib/kitchen-dex-core/src/\",\":kitchen-precompiles/=lib/precompiles-solidity/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":precompiles-solidity/=lib/precompiles-solidity/\",\":solady/=lib/precompiles-solidity/lib/solady/src/\",\":v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/\",\":v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/\",\":v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol\":{\"keccak256\":\"0xc4d7ebf63eb2f6bf3fee1b6c0ee775efa9f31b4843a5511d07eea147e212932d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://01c66a2fad66bc710db7510419a7eee569b40b67cd9f01b70a3fc90d6f76c03b\",\"dweb:/ipfs/QmT1CjJZq4eTNA4nu8E9ZrWfaZu6ReUsDbjcK8DbEFqwx5\"]},\"lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x5dc63d1c6a12fe1b17793e1745877b2fcbe1964c3edfd0a482fac21ca8f18261\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6b7f97c5960a50fd1822cb298551ffc908e37b7893a68d6d08bce18a11cb0f11\",\"dweb:/ipfs/QmQQvxBytoY1eBt3pRQDmvH2hZ2yjhs12YqVfzGm7KSURq\"]},\"lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a\",\"dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621\",\"dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL\"]},\"lib/precompiles-solidity/src/timelock/nftTimelock.sol\":{\"keccak256\":\"0x5b4501ec9d0fe0c2d9dd15eac01fbf6975470c8ae85f186722d23755f92fa950\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0fa31748260c2878cfce8cba140a1fe3bff27e2b65248f69cfe84c8ae8460d9\",\"dweb:/ipfs/QmXoRGsFmeLjWxRL7Erm5TbdJBEC1xUnbMyy9FJiEsHAJL\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.24+commit.e11b9ed9"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "AlreadyReleased"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InvalidLockIndex"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "LockAlreadyExists"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "LockPeriodNotExpired"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "NullAddress"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ReentrancyGuardReentrantCall"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "TransferFailed"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroDuration"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroTokenId"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "releaseTime",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "LockAdded",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "releaseTime",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Locked",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Released",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "duration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "createLockToken"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLocksForBeneficiary",
+          "outputs": [
+            {
+              "internalType": "struct SimpleNFTTimelock.TimeLock",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "contract IERC721",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "tokenId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "releaseTime",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "released",
+                  "type": "bool"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isNftLocked",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "release"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "timeLocks",
+          "outputs": [
+            {
+              "internalType": "contract IERC721",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "releaseTime",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "released",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "constructor": {
+            "details": "Constructor initializes the contract with the deployer as owner"
+          },
+          "getLocksForBeneficiary(address)": {
+            "details": "Returns all timelocks for a beneficiary",
+            "params": {
+              "beneficiary": "Address to query locks for"
+            },
+            "returns": {
+              "_0": "TimeLock structs"
+            }
+          },
+          "isNftLocked(address)": {
+            "details": "Returns the number of timelocks for a beneficiary",
+            "params": {
+              "beneficiary": "Address to query locks for"
+            },
+            "returns": {
+              "_0": "uint256 Number of timelocks"
+            }
+          },
+          "release()": {
+            "details": "Releases locked NFT if lock period has expired"
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/",
+        "kitchen-dex-core/=lib/kitchen-dex-core/src/",
+        "kitchen-precompiles/=lib/precompiles-solidity/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        "precompiles-solidity/=lib/precompiles-solidity/",
+        "solady/=lib/precompiles-solidity/lib/solady/src/",
+        "v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/",
+        "v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/",
+        "v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/precompiles-solidity/src/timelock/nftTimelock.sol": "SimpleNFTTimelock"
+      },
+      "evmVersion": "paris",
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol": {
+        "keccak256": "0xc4d7ebf63eb2f6bf3fee1b6c0ee775efa9f31b4843a5511d07eea147e212932d",
+        "urls": [
+          "bzz-raw://01c66a2fad66bc710db7510419a7eee569b40b67cd9f01b70a3fc90d6f76c03b",
+          "dweb:/ipfs/QmT1CjJZq4eTNA4nu8E9ZrWfaZu6ReUsDbjcK8DbEFqwx5"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
+        "keccak256": "0x5dc63d1c6a12fe1b17793e1745877b2fcbe1964c3edfd0a482fac21ca8f18261",
+        "urls": [
+          "bzz-raw://6b7f97c5960a50fd1822cb298551ffc908e37b7893a68d6d08bce18a11cb0f11",
+          "dweb:/ipfs/QmQQvxBytoY1eBt3pRQDmvH2hZ2yjhs12YqVfzGm7KSURq"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol": {
+        "keccak256": "0x11a5a79827df29e915a12740caf62fe21ebe27c08c9ae3e09abe9ee3ba3866d3",
+        "urls": [
+          "bzz-raw://3cf0c69ab827e3251db9ee6a50647d62c90ba580a4d7bbff21f2bea39e7b2f4a",
+          "dweb:/ipfs/QmZiKwtKU1SBX4RGfQtY7PZfiapbbu6SZ9vizGQD9UHjRA"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8",
+        "urls": [
+          "bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621",
+          "dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL"
+        ],
+        "license": "MIT"
+      },
+      "lib/precompiles-solidity/src/timelock/nftTimelock.sol": {
+        "keccak256": "0x5b4501ec9d0fe0c2d9dd15eac01fbf6975470c8ae85f186722d23755f92fa950",
+        "urls": [
+          "bzz-raw://a0fa31748260c2878cfce8cba140a1fe3bff27e2b65248f69cfe84c8ae8460d9",
+          "dweb:/ipfs/QmXoRGsFmeLjWxRL7Erm5TbdJBEC1xUnbMyy9FJiEsHAJL"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "id": 81
+}

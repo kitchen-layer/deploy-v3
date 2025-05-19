@@ -1,1 +1,400 @@
-{"abi":[{"type":"function","name":"parameters","inputs":[],"outputs":[{"name":"factory","type":"address","internalType":"address"},{"name":"token0","type":"address","internalType":"address"},{"name":"token1","type":"address","internalType":"address"},{"name":"fee","type":"uint24","internalType":"uint24"},{"name":"tickSpacing","type":"int24","internalType":"int24"},{"name":"deployer","type":"address","internalType":"address"}],"stateMutability":"view"}],"bytecode":{"object":"0x608080604052346100155760b8908161001a8239f35b5f80fdfe60808060405260043610156011575f80fd5b5f3560e01c6389035730146023575f80fd5b34607e575f366003190112607e5760c09060018060a01b03805f54169080600154169060025491816003541693855260208501528116604084015262ffffff8160a01c16606084015260b81c60020b608083015260a0820152f35b5f80fdfea2646970667358221220bdff997d23fbf8b9d7dc14765c199aa573caecac5127e3e6edb36f396d6c1e4664736f6c63430008180033","sourceMap":"144:1340:18:-:0;;;;;;;;;;;;;;;;;","linkReferences":{}},"deployedBytecode":{"object":"0x60808060405260043610156011575f80fd5b5f3560e01c6389035730146023575f80fd5b34607e575f366003190112607e5760c09060018060a01b03805f54169080600154169060025491816003541693855260208501528116604084015262ffffff8160a01c16606084015260b81c60020b608083015260a0820152f35b5f80fdfea2646970667358221220bdff997d23fbf8b9d7dc14765c199aa573caecac5127e3e6edb36f396d6c1e4664736f6c63430008180033","sourceMap":"144:1340:18:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;144:1340:18;;;;;;;;;;;;;;;;;427:37;144:1340;;;427:37;144:1340;;;427:37;144:1340;;;;;;;;;;;;;;;;;;;;;;;;;;427:37;144:1340;;;;;;;;;;;;;","linkReferences":{}},"methodIdentifiers":{"parameters()":"89035730"},"rawMetadata":"{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"parameters\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"factory\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"int24\",\"name\":\"tickSpacing\",\"type\":\"int24\"},{\"internalType\":\"address\",\"name\":\"deployer\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"parameters\":{\"details\":\"Called by the pool constructor to fetch the parameters of the pool Returns factory The factory address Returns token0 The first token of the pool by address sort order Returns token1 The second token of the pool by address sort order Returns fee The fee collected upon every swap in the pool, denominated in hundredths of a bip Returns tickSpacing The minimum number of ticks between initialized ticks\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"parameters()\":{\"notice\":\"Get the parameters to be used in constructing the pool, set transiently during pool creation.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/kitchen-dex-core/src/UniswapV3PoolDeployer.sol\":\"UniswapV3PoolDeployer\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/\",\":kitchen-dex-core/=lib/kitchen-dex-core/src/\",\":kitchen-precompiles/=lib/precompiles-solidity/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":precompiles-solidity/=lib/precompiles-solidity/\",\":solady/=lib/precompiles-solidity/lib/solady/src/\",\":v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/\",\":v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/\",\":v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/kitchen-dex-core/src/NoDelegateCall.sol\":{\"keccak256\":\"0xb14d62e37e6febf229b1c8c519fb803b6d65829e6bff47084aec4d723edad55c\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://5513602ea6387633d3b5a2ffbeea5f7a6e92df6755817ed60d35e35dd4be82cb\",\"dweb:/ipfs/QmVk6hzrgnvDZHnB5wrNJMyeZ5dXhtCos9r5Jn9uqps6fh\"]},\"lib/kitchen-dex-core/src/UniswapV3Pool.sol\":{\"keccak256\":\"0xcf53959343367eadd14fd2aea9b653400c80f272c22b728481903d9725c01182\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://b32784117b2df148265caacc0599a3e5138c4535dcdb83b24eda5583e31be1b3\",\"dweb:/ipfs/QmWibyyo14USg5N216SZUXrU5bXTBsh2qKy2JPcFnKSudL\"]},\"lib/kitchen-dex-core/src/UniswapV3PoolDeployer.sol\":{\"keccak256\":\"0x5fedda1e0da8a58cea0977a23145aa268e41fea91094dca57afcfefa31aa4763\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://8ac3208c12f12e9c4159bfc8d6705a422c3caf2dcd9fdf8fe8aa5cb2babb17bb\",\"dweb:/ipfs/QmS75zWHoPTphwtEHjcYtHvjmdssdUJbkvLn4GMmqH4cYq\"]},\"lib/kitchen-dex-core/src/interfaces/IERC20Minimal.sol\":{\"keccak256\":\"0x1b73c16ddbdca09756dc1a4041882e4c94327055977296c8f249c74c2dc55aae\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9a2ba23481e5d56e6afaaea0102e8c8a79653ed4ecfb5ea2f40ab925b8fe19b0\",\"dweb:/ipfs/QmYbfdQyYjVMvU1KNwNmmWCYWez4CPnCndsSWwFVy95KcY\"]},\"lib/kitchen-dex-core/src/interfaces/IUniswapV3Factory.sol\":{\"keccak256\":\"0xdad1d2a233f18f0abc7a0b4953a0e4164b29c11d92839bdbe97c864c91d98d2e\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://d134b6c51ed0caa633d5e6ce79f365bc58edc85589dbb2f2c8a674c285e21821\",\"dweb:/ipfs/QmdEsRhWHgqQynedFrsdzCRKUBEHLJ8nDuS887p81V9HZd\"]},\"lib/kitchen-dex-core/src/interfaces/IUniswapV3Pool.sol\":{\"keccak256\":\"0x89d3262aac1105665ca6a83ec8e29c951123dd998df9a52a8dd30296642c2425\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://edca9635ed2aefabc9a3e4d3ffddef0d9a2887bb5ca811e3aeda92cd396bd1c9\",\"dweb:/ipfs/QmaXyTQHUkGvoA3SgEamaYzd9yJe5gFqocUEWT9U7dzBeZ\"]},\"lib/kitchen-dex-core/src/interfaces/IUniswapV3PoolDeployer.sol\":{\"keccak256\":\"0xb3850c65d33df608accb6e5a9bff2704d11b0fd01cb5c1849ab6644ef4763de3\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://61ef26cd45d09aaeb4998edad3ce954d062045b0fac2cf4b00eec1c827ca2589\",\"dweb:/ipfs/QmUxvZFLuPFp8MxFHTMCi5WJVXbPsNHLJoNqUxyVSdhsCd\"]},\"lib/kitchen-dex-core/src/interfaces/callback/IUniswapV3FlashCallback.sol\":{\"keccak256\":\"0x9526c752207e4e62dcc638b267cc2b9293e4976706798c4dd6453af043125492\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://4ae01ab0b92d064fdc69c14840ae98a89af32032260836ee368e1ff58dd00dc7\",\"dweb:/ipfs/QmNg6J92K16ReRwLYbL9wjKf98CVak56DN2uBLoRLQQQxa\"]},\"lib/kitchen-dex-core/src/interfaces/callback/IUniswapV3MintCallback.sol\":{\"keccak256\":\"0x9f1315e7b5d9cca93c369519586a432042f0848180b52539c408c5e961f5eedb\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://48b6c66b0538b58000d119c03577453086d044629ed6e3d57bb6abda7497aef7\",\"dweb:/ipfs/Qmbzgwt3bcH2QaezWFuSXQcP5s78A3cnsbwQZcWbfmZj5W\"]},\"lib/kitchen-dex-core/src/interfaces/callback/IUniswapV3SwapCallback.sol\":{\"keccak256\":\"0x232c3df87c0c471c2bb0e4ec2517d499b28d9538a941e37f408095fb93a50e5d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://5fec80efd09d148927e8e6e13a92d67b5c6a7817b7c6eafcc7bfdabfbdb91440\",\"dweb:/ipfs/QmSjP3ET8XaHQp9b6zV6Gp8z7yUeZMAo95LdSnitCy6Y8G\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolActions.sol\":{\"keccak256\":\"0xbd7bd7f2fcf836799776bcba7bbb609f2d90eed906a6066dc35d6882ca981028\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://679371af0f965881cf2b884758ad7c52ed77b358fd2f904b8641922e9b9271a0\",\"dweb:/ipfs/QmYvh2gHdwSUZ3CpvucZUyTcdeTcw28QDE2chFgDz5ww2L\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolDerivedState.sol\":{\"keccak256\":\"0xf44883d8c8c4f696b991260b14911e00fa780f6cc362ac0e5c3f8e05311fc0f0\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://c70d2d25fc283390db58921ff3fb3d53d6a414313f8fbb5b86637413fb798e4e\",\"dweb:/ipfs/QmbQ9YvRgmBjWBFfjbHnBha29myQKha6SrLNPCecSQb6A9\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolEvents.sol\":{\"keccak256\":\"0xdd271e2ff465939e8c38243d1d73f7087b4eb29b8a70d809b1432313017c5a8d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://126fd841c71638f8a90fab57adbf333db633d53708b311ed3919b4a36838297a\",\"dweb:/ipfs/QmQdfe8mnumHiUSGxcPTij8PfbrtRVYQPoQF2hB2nf1hPR\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolImmutables.sol\":{\"keccak256\":\"0x1dd9d63523907585292b947d310c5bb4dcc1d688bc23542f391d72c3c2e6ddfd\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9db6e1b2dac0a8dbf0cebd2013acc16d5b1c640103f8457bb3138b7813497160\",\"dweb:/ipfs/QmbBhz8yJdcKGBzSZmNYyHjoz6ptRRDo1ZArXkQdKnh6gj\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolOwnerActions.sol\":{\"keccak256\":\"0x718143ded6c17349932749a7f0f3caebe89a0644b1c523a73b36d0a6731b9a25\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://2b5200ed3d593ee8fcf334cb225db07378f2e05159d5c530ae095a79073c5d3c\",\"dweb:/ipfs/QmYxHHvDbp7rThBSd2EPnQTiRJZ9oQXJNxwnFDEHiZQrRk\"]},\"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolState.sol\":{\"keccak256\":\"0x9b5a3b3bc51ab8004cc9d5fd4209aaafc8a702ca3c5769cbda2f0e12a3ac0075\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://f039df2ebe25ec1ed68e6bfc2c28ad5647e417fabc806fba4011e6a6f230e15c\",\"dweb:/ipfs/Qmdt3ge4ts73pabAipSpn9CHommejUuv1CdoT78FvbEmLn\"]},\"lib/kitchen-dex-core/src/libraries/BitMath.sol\":{\"keccak256\":\"0x7397b91a7e3d051ffb749540fa5a907373ff14ca9e7f0e54ba4d2287ed525e6a\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://73a9c0e1256c549b57fc24c3469494fc5b9343d1c397efbcca092e70f34e7ec1\",\"dweb:/ipfs/QmWCvB6ZjThFzEVEfT7fpvuaJeuLnb9HMSCL66JicjCd6j\"]},\"lib/kitchen-dex-core/src/libraries/FixedPoint128.sol\":{\"keccak256\":\"0x2d1f4f73ae0d8f0a210b8d30084659b57c56ac8f2f96011fca36f00a6d417178\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://2ba88933f16cd2df398e19c6ad227268f83c03081b70d243c97116d2ed9bc241\",\"dweb:/ipfs/QmTUGxdh8snzEM9VrTSS47StCg9VVWvvLJtJeNnMTFY4xb\"]},\"lib/kitchen-dex-core/src/libraries/FixedPoint96.sol\":{\"keccak256\":\"0x0ba8a9b95a956a4050749c0158e928398c447c91469682ca8a7cc7e77a7fe032\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://186d3b528866065a5856f96d2aeec698efa99f8da913e9adf34f8cc296cc993d\",\"dweb:/ipfs/QmUAiMvtAQp8c9dy57bqJYzG7hkb1uChiPaQmt264skoqP\"]},\"lib/kitchen-dex-core/src/libraries/FullMath.sol\":{\"keccak256\":\"0xb78d670763bf33ec2fdea8d3e8b1e1da752c39275bcb02c08750e9f8d6be858e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://06812a8c4e001300a55f1834d859a4e966baa7318f2bc30ac1c713001b5ea6e5\",\"dweb:/ipfs/QmWAxcuYu33JY8LPuif4dAai5mRgWHEePQJcrPre3yuSSY\"]},\"lib/kitchen-dex-core/src/libraries/LiquidityMath.sol\":{\"keccak256\":\"0x242a82338100fb3e1075e799f993d55fc080a7cd67eefed4a988e1e983515f59\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://1f8dda17ed30f0ffc2cc7bd8de769094fc0c06a95994227c6e4aba85c7b001d7\",\"dweb:/ipfs/Qmf1UXAtUitpntV52sng1oSmNEuqDwXYxAUnDasvVivw2J\"]},\"lib/kitchen-dex-core/src/libraries/LowGasSafeMath.sol\":{\"keccak256\":\"0xe7de4b3176cfe1ef2050589fb6dacc37ba028d39ffd2be1eb336212d2d43df14\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://83396d096d711c7bcc409ece30b6b4b67e01ceb83cf9524a449e7082b77c68ec\",\"dweb:/ipfs/QmeQjZJrqD9rHi38urArnngtK5CDYfyXnQZgb7rUK41dqF\"]},\"lib/kitchen-dex-core/src/libraries/Oracle.sol\":{\"keccak256\":\"0xb4f9103e75796ee7aed3c77a1fd5b1d8e2f66d927345e6809297ad2fde382f87\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://8b7c7614e59be43d185f6a0e53d1122924c023d60440ed8c9d796093343a396e\",\"dweb:/ipfs/QmaJqhFJLFMVu3mpDw3G88yhgsxXMhX1kMawRQJU3eY5hk\"]},\"lib/kitchen-dex-core/src/libraries/Position.sol\":{\"keccak256\":\"0x1b89f23870f146494fc296372b9e5f03c4ae197e00582b922f10e834268a144d\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://c1ef4ee0c86cd290d0bf61f6f97c8021a1d5c13c54ab10d5b59c66a8ee37793d\",\"dweb:/ipfs/QmX7NJKf52z13QALeWsUSB3otqs6MXGGmQvdS4xoMydkmL\"]},\"lib/kitchen-dex-core/src/libraries/SafeCast.sol\":{\"keccak256\":\"0xf53c2cdb7bbd6f00a68be19305e6219594ed72e9073525f2be5833e20676e4b5\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://1596cd076287b0b17889a97a4e23df9dfc90f0428e025d9da67f3f3711910800\",\"dweb:/ipfs/QmXivTiAGKo5P9NrAJVGiK9AiCRAE3Be7JMRXVR2uAHjKS\"]},\"lib/kitchen-dex-core/src/libraries/SqrtPriceMath.sol\":{\"keccak256\":\"0x4bef140f562f05ac7838cf95fc726cf4d769872867a74c125d26b1b297a60922\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://0cedd1a027b38d650721164825cae8045f4ae4612211cfa24c3d57bc9fd97b46\",\"dweb:/ipfs/QmSdrGeWtPp1uhcBHKtYx63GgJFGnPxf8zrkgVGYoHXLVq\"]},\"lib/kitchen-dex-core/src/libraries/SwapMath.sol\":{\"keccak256\":\"0x687fe60eeac60df0822b0517a6d65066642022c9fbe198d6b47eaefa84d27e85\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://94622f140c673dd071a38cd938c59daabf4f993b9fb3b7e583ede57e09fb40fb\",\"dweb:/ipfs/QmayjfpTQoq933HmF456eFL3WXyouVV9iZQ4sWxHfqKqjV\"]},\"lib/kitchen-dex-core/src/libraries/Tick.sol\":{\"keccak256\":\"0x49ac1107f5946d97fd9a9d7343dfca9e5d2ae6e5451875b3ad7b8d401303a6c4\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://a984adca03d388f05c971d64737a2b0c072e415f8c28fcc2e9fecce589dfd5dc\",\"dweb:/ipfs/QmUaVf3QUaTVfuAvNcsXUQS7B5pZp6wASToLVbH7xv5Af7\"]},\"lib/kitchen-dex-core/src/libraries/TickBitmap.sol\":{\"keccak256\":\"0x5504397aa659b7245801a0841bbb7e9065571b2536d7a527b35148e34d4004f7\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://b5aa4ca9f907790afc1fef1d292607116f5445825d3032a8ccd1e44209302a69\",\"dweb:/ipfs/QmWRRGQ3yGyJLt4tTaMWJVhvspaZAAehmSqM6E1mLLFNxX\"]},\"lib/kitchen-dex-core/src/libraries/TickMath.sol\":{\"keccak256\":\"0x97ae1cf536b70034fdd96a24612272f1ea55344d8045f072969db3e59657e86b\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b99fcc21b687b8b26f8bbda473338080ef8dde8d5c75de8e628ca102704e5195\",\"dweb:/ipfs/QmNfr4zYJLqnmfpFDQYSRijsboEhYzERJfV7SzumLzk1RC\"]},\"lib/kitchen-dex-core/src/libraries/TransferHelper.sol\":{\"keccak256\":\"0x3ce41147d7b7d62a64744499baeecdbf875fb711bafa9642740951b34b2531aa\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://09213fbecd40aa74a65815ec4f4335f07749d50373c13685ae86657a103ac1a1\",\"dweb:/ipfs/QmTc1EyrmQBozg2A7HvKJPeLTNMuVpixMxeHT6NyKGnzho\"]},\"lib/kitchen-dex-core/src/libraries/UnsafeMath.sol\":{\"keccak256\":\"0x1586de8cc5116f0e3d7cd2d21ac18eb114da88c53d5a83e2ed0a7153ea611ab2\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://6b795e893e96dc899ed5aeb14209b712fb7e4bf7ceeff9712598edc698c6f9f6\",\"dweb:/ipfs/QmdnDNcfh7qWeGCZRGnhkH81DSSrrFPhfV6meuaJo5anyi\"]}},\"version\":1}","metadata":{"compiler":{"version":"0.8.24+commit.e11b9ed9"},"language":"Solidity","output":{"abi":[{"inputs":[],"stateMutability":"view","type":"function","name":"parameters","outputs":[{"internalType":"address","name":"factory","type":"address"},{"internalType":"address","name":"token0","type":"address"},{"internalType":"address","name":"token1","type":"address"},{"internalType":"uint24","name":"fee","type":"uint24"},{"internalType":"int24","name":"tickSpacing","type":"int24"},{"internalType":"address","name":"deployer","type":"address"}]}],"devdoc":{"kind":"dev","methods":{},"version":1},"userdoc":{"kind":"user","methods":{"parameters()":{"notice":"Get the parameters to be used in constructing the pool, set transiently during pool creation."}},"version":1}},"settings":{"remappings":["@openzeppelin/=lib/openzeppelin-contracts/","ds-test/=lib/forge-std/lib/ds-test/src/","erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/","forge-std/=lib/forge-std/src/","halmos-cheatcodes/=lib/precompiles-solidity/lib/halmos-cheatcodes/src/","kitchen-dex-core/=lib/kitchen-dex-core/src/","kitchen-precompiles/=lib/precompiles-solidity/src/","openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/","precompiles-solidity/=lib/precompiles-solidity/","solady/=lib/precompiles-solidity/lib/solady/src/","v2-core/=lib/kitchen-dex-core/lib/v2-core/contracts/","v3-core-contracts/=lib/precompiles-solidity/lib/v3-core/contracts/","v3-periphery-contracts/=lib/precompiles-solidity/lib/v3-periphery/contracts/"],"optimizer":{"enabled":true,"runs":200},"metadata":{"bytecodeHash":"ipfs"},"compilationTarget":{"lib/kitchen-dex-core/src/UniswapV3PoolDeployer.sol":"UniswapV3PoolDeployer"},"evmVersion":"cancun","libraries":{},"viaIR":true},"sources":{"lib/kitchen-dex-core/src/NoDelegateCall.sol":{"keccak256":"0xb14d62e37e6febf229b1c8c519fb803b6d65829e6bff47084aec4d723edad55c","urls":["bzz-raw://5513602ea6387633d3b5a2ffbeea5f7a6e92df6755817ed60d35e35dd4be82cb","dweb:/ipfs/QmVk6hzrgnvDZHnB5wrNJMyeZ5dXhtCos9r5Jn9uqps6fh"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/UniswapV3Pool.sol":{"keccak256":"0xcf53959343367eadd14fd2aea9b653400c80f272c22b728481903d9725c01182","urls":["bzz-raw://b32784117b2df148265caacc0599a3e5138c4535dcdb83b24eda5583e31be1b3","dweb:/ipfs/QmWibyyo14USg5N216SZUXrU5bXTBsh2qKy2JPcFnKSudL"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/UniswapV3PoolDeployer.sol":{"keccak256":"0x5fedda1e0da8a58cea0977a23145aa268e41fea91094dca57afcfefa31aa4763","urls":["bzz-raw://8ac3208c12f12e9c4159bfc8d6705a422c3caf2dcd9fdf8fe8aa5cb2babb17bb","dweb:/ipfs/QmS75zWHoPTphwtEHjcYtHvjmdssdUJbkvLn4GMmqH4cYq"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/interfaces/IERC20Minimal.sol":{"keccak256":"0x1b73c16ddbdca09756dc1a4041882e4c94327055977296c8f249c74c2dc55aae","urls":["bzz-raw://9a2ba23481e5d56e6afaaea0102e8c8a79653ed4ecfb5ea2f40ab925b8fe19b0","dweb:/ipfs/QmYbfdQyYjVMvU1KNwNmmWCYWez4CPnCndsSWwFVy95KcY"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/IUniswapV3Factory.sol":{"keccak256":"0xdad1d2a233f18f0abc7a0b4953a0e4164b29c11d92839bdbe97c864c91d98d2e","urls":["bzz-raw://d134b6c51ed0caa633d5e6ce79f365bc58edc85589dbb2f2c8a674c285e21821","dweb:/ipfs/QmdEsRhWHgqQynedFrsdzCRKUBEHLJ8nDuS887p81V9HZd"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/IUniswapV3Pool.sol":{"keccak256":"0x89d3262aac1105665ca6a83ec8e29c951123dd998df9a52a8dd30296642c2425","urls":["bzz-raw://edca9635ed2aefabc9a3e4d3ffddef0d9a2887bb5ca811e3aeda92cd396bd1c9","dweb:/ipfs/QmaXyTQHUkGvoA3SgEamaYzd9yJe5gFqocUEWT9U7dzBeZ"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/IUniswapV3PoolDeployer.sol":{"keccak256":"0xb3850c65d33df608accb6e5a9bff2704d11b0fd01cb5c1849ab6644ef4763de3","urls":["bzz-raw://61ef26cd45d09aaeb4998edad3ce954d062045b0fac2cf4b00eec1c827ca2589","dweb:/ipfs/QmUxvZFLuPFp8MxFHTMCi5WJVXbPsNHLJoNqUxyVSdhsCd"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/callback/IUniswapV3FlashCallback.sol":{"keccak256":"0x9526c752207e4e62dcc638b267cc2b9293e4976706798c4dd6453af043125492","urls":["bzz-raw://4ae01ab0b92d064fdc69c14840ae98a89af32032260836ee368e1ff58dd00dc7","dweb:/ipfs/QmNg6J92K16ReRwLYbL9wjKf98CVak56DN2uBLoRLQQQxa"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/callback/IUniswapV3MintCallback.sol":{"keccak256":"0x9f1315e7b5d9cca93c369519586a432042f0848180b52539c408c5e961f5eedb","urls":["bzz-raw://48b6c66b0538b58000d119c03577453086d044629ed6e3d57bb6abda7497aef7","dweb:/ipfs/Qmbzgwt3bcH2QaezWFuSXQcP5s78A3cnsbwQZcWbfmZj5W"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/callback/IUniswapV3SwapCallback.sol":{"keccak256":"0x232c3df87c0c471c2bb0e4ec2517d499b28d9538a941e37f408095fb93a50e5d","urls":["bzz-raw://5fec80efd09d148927e8e6e13a92d67b5c6a7817b7c6eafcc7bfdabfbdb91440","dweb:/ipfs/QmSjP3ET8XaHQp9b6zV6Gp8z7yUeZMAo95LdSnitCy6Y8G"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolActions.sol":{"keccak256":"0xbd7bd7f2fcf836799776bcba7bbb609f2d90eed906a6066dc35d6882ca981028","urls":["bzz-raw://679371af0f965881cf2b884758ad7c52ed77b358fd2f904b8641922e9b9271a0","dweb:/ipfs/QmYvh2gHdwSUZ3CpvucZUyTcdeTcw28QDE2chFgDz5ww2L"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolDerivedState.sol":{"keccak256":"0xf44883d8c8c4f696b991260b14911e00fa780f6cc362ac0e5c3f8e05311fc0f0","urls":["bzz-raw://c70d2d25fc283390db58921ff3fb3d53d6a414313f8fbb5b86637413fb798e4e","dweb:/ipfs/QmbQ9YvRgmBjWBFfjbHnBha29myQKha6SrLNPCecSQb6A9"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolEvents.sol":{"keccak256":"0xdd271e2ff465939e8c38243d1d73f7087b4eb29b8a70d809b1432313017c5a8d","urls":["bzz-raw://126fd841c71638f8a90fab57adbf333db633d53708b311ed3919b4a36838297a","dweb:/ipfs/QmQdfe8mnumHiUSGxcPTij8PfbrtRVYQPoQF2hB2nf1hPR"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolImmutables.sol":{"keccak256":"0x1dd9d63523907585292b947d310c5bb4dcc1d688bc23542f391d72c3c2e6ddfd","urls":["bzz-raw://9db6e1b2dac0a8dbf0cebd2013acc16d5b1c640103f8457bb3138b7813497160","dweb:/ipfs/QmbBhz8yJdcKGBzSZmNYyHjoz6ptRRDo1ZArXkQdKnh6gj"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolOwnerActions.sol":{"keccak256":"0x718143ded6c17349932749a7f0f3caebe89a0644b1c523a73b36d0a6731b9a25","urls":["bzz-raw://2b5200ed3d593ee8fcf334cb225db07378f2e05159d5c530ae095a79073c5d3c","dweb:/ipfs/QmYxHHvDbp7rThBSd2EPnQTiRJZ9oQXJNxwnFDEHiZQrRk"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/interfaces/pool/IUniswapV3PoolState.sol":{"keccak256":"0x9b5a3b3bc51ab8004cc9d5fd4209aaafc8a702ca3c5769cbda2f0e12a3ac0075","urls":["bzz-raw://f039df2ebe25ec1ed68e6bfc2c28ad5647e417fabc806fba4011e6a6f230e15c","dweb:/ipfs/Qmdt3ge4ts73pabAipSpn9CHommejUuv1CdoT78FvbEmLn"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/BitMath.sol":{"keccak256":"0x7397b91a7e3d051ffb749540fa5a907373ff14ca9e7f0e54ba4d2287ed525e6a","urls":["bzz-raw://73a9c0e1256c549b57fc24c3469494fc5b9343d1c397efbcca092e70f34e7ec1","dweb:/ipfs/QmWCvB6ZjThFzEVEfT7fpvuaJeuLnb9HMSCL66JicjCd6j"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/FixedPoint128.sol":{"keccak256":"0x2d1f4f73ae0d8f0a210b8d30084659b57c56ac8f2f96011fca36f00a6d417178","urls":["bzz-raw://2ba88933f16cd2df398e19c6ad227268f83c03081b70d243c97116d2ed9bc241","dweb:/ipfs/QmTUGxdh8snzEM9VrTSS47StCg9VVWvvLJtJeNnMTFY4xb"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/FixedPoint96.sol":{"keccak256":"0x0ba8a9b95a956a4050749c0158e928398c447c91469682ca8a7cc7e77a7fe032","urls":["bzz-raw://186d3b528866065a5856f96d2aeec698efa99f8da913e9adf34f8cc296cc993d","dweb:/ipfs/QmUAiMvtAQp8c9dy57bqJYzG7hkb1uChiPaQmt264skoqP"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/FullMath.sol":{"keccak256":"0xb78d670763bf33ec2fdea8d3e8b1e1da752c39275bcb02c08750e9f8d6be858e","urls":["bzz-raw://06812a8c4e001300a55f1834d859a4e966baa7318f2bc30ac1c713001b5ea6e5","dweb:/ipfs/QmWAxcuYu33JY8LPuif4dAai5mRgWHEePQJcrPre3yuSSY"],"license":"MIT"},"lib/kitchen-dex-core/src/libraries/LiquidityMath.sol":{"keccak256":"0x242a82338100fb3e1075e799f993d55fc080a7cd67eefed4a988e1e983515f59","urls":["bzz-raw://1f8dda17ed30f0ffc2cc7bd8de769094fc0c06a95994227c6e4aba85c7b001d7","dweb:/ipfs/Qmf1UXAtUitpntV52sng1oSmNEuqDwXYxAUnDasvVivw2J"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/LowGasSafeMath.sol":{"keccak256":"0xe7de4b3176cfe1ef2050589fb6dacc37ba028d39ffd2be1eb336212d2d43df14","urls":["bzz-raw://83396d096d711c7bcc409ece30b6b4b67e01ceb83cf9524a449e7082b77c68ec","dweb:/ipfs/QmeQjZJrqD9rHi38urArnngtK5CDYfyXnQZgb7rUK41dqF"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/Oracle.sol":{"keccak256":"0xb4f9103e75796ee7aed3c77a1fd5b1d8e2f66d927345e6809297ad2fde382f87","urls":["bzz-raw://8b7c7614e59be43d185f6a0e53d1122924c023d60440ed8c9d796093343a396e","dweb:/ipfs/QmaJqhFJLFMVu3mpDw3G88yhgsxXMhX1kMawRQJU3eY5hk"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/libraries/Position.sol":{"keccak256":"0x1b89f23870f146494fc296372b9e5f03c4ae197e00582b922f10e834268a144d","urls":["bzz-raw://c1ef4ee0c86cd290d0bf61f6f97c8021a1d5c13c54ab10d5b59c66a8ee37793d","dweb:/ipfs/QmX7NJKf52z13QALeWsUSB3otqs6MXGGmQvdS4xoMydkmL"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/libraries/SafeCast.sol":{"keccak256":"0xf53c2cdb7bbd6f00a68be19305e6219594ed72e9073525f2be5833e20676e4b5","urls":["bzz-raw://1596cd076287b0b17889a97a4e23df9dfc90f0428e025d9da67f3f3711910800","dweb:/ipfs/QmXivTiAGKo5P9NrAJVGiK9AiCRAE3Be7JMRXVR2uAHjKS"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/SqrtPriceMath.sol":{"keccak256":"0x4bef140f562f05ac7838cf95fc726cf4d769872867a74c125d26b1b297a60922","urls":["bzz-raw://0cedd1a027b38d650721164825cae8045f4ae4612211cfa24c3d57bc9fd97b46","dweb:/ipfs/QmSdrGeWtPp1uhcBHKtYx63GgJFGnPxf8zrkgVGYoHXLVq"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/libraries/SwapMath.sol":{"keccak256":"0x687fe60eeac60df0822b0517a6d65066642022c9fbe198d6b47eaefa84d27e85","urls":["bzz-raw://94622f140c673dd071a38cd938c59daabf4f993b9fb3b7e583ede57e09fb40fb","dweb:/ipfs/QmayjfpTQoq933HmF456eFL3WXyouVV9iZQ4sWxHfqKqjV"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/libraries/Tick.sol":{"keccak256":"0x49ac1107f5946d97fd9a9d7343dfca9e5d2ae6e5451875b3ad7b8d401303a6c4","urls":["bzz-raw://a984adca03d388f05c971d64737a2b0c072e415f8c28fcc2e9fecce589dfd5dc","dweb:/ipfs/QmUaVf3QUaTVfuAvNcsXUQS7B5pZp6wASToLVbH7xv5Af7"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/libraries/TickBitmap.sol":{"keccak256":"0x5504397aa659b7245801a0841bbb7e9065571b2536d7a527b35148e34d4004f7","urls":["bzz-raw://b5aa4ca9f907790afc1fef1d292607116f5445825d3032a8ccd1e44209302a69","dweb:/ipfs/QmWRRGQ3yGyJLt4tTaMWJVhvspaZAAehmSqM6E1mLLFNxX"],"license":"BUSL-1.1"},"lib/kitchen-dex-core/src/libraries/TickMath.sol":{"keccak256":"0x97ae1cf536b70034fdd96a24612272f1ea55344d8045f072969db3e59657e86b","urls":["bzz-raw://b99fcc21b687b8b26f8bbda473338080ef8dde8d5c75de8e628ca102704e5195","dweb:/ipfs/QmNfr4zYJLqnmfpFDQYSRijsboEhYzERJfV7SzumLzk1RC"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/TransferHelper.sol":{"keccak256":"0x3ce41147d7b7d62a64744499baeecdbf875fb711bafa9642740951b34b2531aa","urls":["bzz-raw://09213fbecd40aa74a65815ec4f4335f07749d50373c13685ae86657a103ac1a1","dweb:/ipfs/QmTc1EyrmQBozg2A7HvKJPeLTNMuVpixMxeHT6NyKGnzho"],"license":"GPL-2.0-or-later"},"lib/kitchen-dex-core/src/libraries/UnsafeMath.sol":{"keccak256":"0x1586de8cc5116f0e3d7cd2d21ac18eb114da88c53d5a83e2ed0a7153ea611ab2","urls":["bzz-raw://6b795e893e96dc899ed5aeb14209b712fb7e4bf7ceeff9712598edc698c6f9f6","dweb:/ipfs/QmdnDNcfh7qWeGCZRGnhkH81DSSrrFPhfV6meuaJo5anyi"],"license":"GPL-2.0-or-later"}},"version":1},"id":18}
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "parameters",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "factory",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "token0",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "token1",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "fee",
+          "type": "uint24",
+          "internalType": "uint24"
+        },
+        {
+          "name": "tickSpacing",
+          "type": "int24",
+          "internalType": "int24"
+        },
+        {
+          "name": "deployer",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608080604052346100155760bd908161001b8239f35b600080fdfe6080806040526004361015601257600080fd5b600090813560e01c638903573014602857600080fd5b346083578160031936011260835760c09160018060a01b03809154169080600154169060025491816003541693855260208501528116604084015262ffffff8160a01c16606084015260b81c60020b608083015260a0820152f35b5080fdfea2646970667358221220d66baacb502893b3dbcfbcdd953091f8bea24ba440bd27f617973fae5bb07cb364736f6c63430008150033",
+    "sourceMap": "144:1423:4:-:0;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080806040526004361015601257600080fd5b600090813560e01c638903573014602857600080fd5b346083578160031936011260835760c09160018060a01b03809154169080600154169060025491816003541693855260208501528116604084015262ffffff8160a01c16606084015260b81c60020b608083015260a0820152f35b5080fdfea2646970667358221220d66baacb502893b3dbcfbcdd953091f8bea24ba440bd27f617973fae5bb07cb364736f6c63430008150033",
+    "sourceMap": "144:1423:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;427:37;144:1423;;;427:37;144:1423;;;427:37;144:1423;;;;;;;;;;;;;;;;;;;;;;;;;;427:37;144:1423;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "parameters()": "89035730"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"parameters\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"factory\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"int24\",\"name\":\"tickSpacing\",\"type\":\"int24\"},{\"internalType\":\"address\",\"name\":\"deployer\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"parameters\":{\"details\":\"Called by the pool constructor to fetch the parameters of the pool Returns factory The factory address Returns token0 The first token of the pool by address sort order Returns token1 The second token of the pool by address sort order Returns fee The fee collected upon every swap in the pool, denominated in hundredths of a bip Returns tickSpacing The minimum number of ticks between initialized ticks\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"parameters()\":{\"notice\":\"Get the parameters to be used in constructing the pool, set transiently during pool creation.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/UniswapV3PoolDeployer.sol\":\"UniswapV3PoolDeployer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"src/NoDelegateCall.sol\":{\"keccak256\":\"0x1310b4cdbddce9ffd7a7332701cbe9e05053fd3458ee69d8be1c66d0b2f61062\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://1bb5432321dd72c793580b8d6889c4d431d4677edd044d29f34fcda4bb14d03c\",\"dweb:/ipfs/QmfVyeBahdz6RwV7Am69k5jCVNeuDbiUDqN7W2MiBDuSEy\"]},\"src/UniswapV3Pool.sol\":{\"keccak256\":\"0x1dfd74716b7b4b223a540f8dba95b4bce55829b04eed635eeaccea1cdfd2e9c1\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://5626d96345bc7bdb8963132c066c7c8e33d99b156152785d0d0ca83c94973887\",\"dweb:/ipfs/Qmdk5tk86wVeRDxdrBhxMuZu6QQ4QCVuJz6mjKq9i7Ur4f\"]},\"src/UniswapV3PoolDeployer.sol\":{\"keccak256\":\"0x6ce1517649aa26da83d5e51d4c7fd85e25365b759ccf18b07617dc72557885f7\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://b6da51d92a6c7a506338be32cac20d07ba2ccf37ed984038252716a6a9604f0a\",\"dweb:/ipfs/QmbTxeE19RKTR4s3bWgy3w17Jg1bcky8sHWBiW9yML2kSP\"]},\"src/interfaces/IERC20Minimal.sol\":{\"keccak256\":\"0x6a4b798d07873922974c31ccd331b532b456b59eb7e3cfdb92f2dda63153bf60\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://12d582fb3e77a1cf18af6e669ad41769a8fa27edc6d05bcc705a211bc132e448\",\"dweb:/ipfs/QmbPfCmzoTkVxhNa2g6CKynxXcgBUUi7YUvUPrL7qdKKTM\"]},\"src/interfaces/IUniswapV3Factory.sol\":{\"keccak256\":\"0x35b865d61f3b9c20caecf9d20305bb4e4652eee10fc75d8712064539ddf6850b\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b9a1ea70771d856ac5efe7197c3c976da295291ed3d8cd7ea008d3e41c199962\",\"dweb:/ipfs/QmYaenuVGRMGdwPoXQ74kmxnbF6wrg7NTU5XqtUGbmPCyp\"]},\"src/interfaces/IUniswapV3Pool.sol\":{\"keccak256\":\"0xdb0de307537fba604bf6c32953a1f95cd6d0077b3d13a049f0e1b6f9583ca428\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b47928ea080c4fa9da894d51215bd9fe189a30d9d46ee8023b8d0baea716fd4a\",\"dweb:/ipfs/QmPgH877bfaCqvPHqDHGqpiaHUkUGLYR7bKctGmK5Wihhd\"]},\"src/interfaces/IUniswapV3PoolDeployer.sol\":{\"keccak256\":\"0x1fa3ce7f41570d448b3049ba45ce15e148a4506a2ebe1a931db8dd559d668e14\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://80f5ba958ceb5a9c66dcc0294e6045bebb36487f830eee3b2b082d685fd9f7e2\",\"dweb:/ipfs/QmSW3s63uKn7tk98HpQn7yCqWzV66iGxbNFrwo5814mvf1\"]},\"src/interfaces/callback/IUniswapV3FlashCallback.sol\":{\"keccak256\":\"0xc5345e3baec52f486b55d456e1fb50659998da861c94862c291e8a1367e0405a\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://f9c50cffb5fded1c4b28ed9de235a9c8578179dd12074759986166537a57df52\",\"dweb:/ipfs/QmQq8mRmHH9S8PXXKcxvdvdNT4oY4tLPB3XG2m1BVaBjHX\"]},\"src/interfaces/callback/IUniswapV3MintCallback.sol\":{\"keccak256\":\"0xe3f520f1cc97d4a831eecb96efc03da190ceb50762a9fa011a168eafce7f2d2a\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://39898e322b28fa5fc2f3bbe51e81b00b3048da9dafd2b288e8afe5445fd06366\",\"dweb:/ipfs/QmfUf6j86Qz89WybRmnbRC1Y9Yjmm4eimJPLDYysTdQ4LD\"]},\"src/interfaces/callback/IUniswapV3SwapCallback.sol\":{\"keccak256\":\"0xe7897cf7e7b028d8df325127f33412a1553ab8f92b61a304c54fb5daa0dc038f\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://a822d62230131144bab49da2a56b6c2b832d8ea779c4824152f54b371969f67b\",\"dweb:/ipfs/QmbE5zt6CCZKZUJVFaqfP2s1GTwg5FkSvXdfcW72sUNtk2\"]},\"src/interfaces/pool/IUniswapV3PoolActions.sol\":{\"keccak256\":\"0x27135a5465a44c003e90e9a7f2dcef7399ddcb960dfaa77012ddc0d2762eef11\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://e90f7169e9a49d53987e559a8a96304ee7ee55f0e05994a24af52203de6bf7ff\",\"dweb:/ipfs/QmShJp1xCWb22ZB6LdCLcTs1ZsZZ5gRFcErCyLAE9TLxHw\"]},\"src/interfaces/pool/IUniswapV3PoolDerivedState.sol\":{\"keccak256\":\"0xe5055655db272d2c78431356f32f73315144aa8fc8d8211a6997b5ee43f0dfbf\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://c7c55226ec781e4273fabecc48a77ab4f76aec948746bf0a22a76a98af5e12e4\",\"dweb:/ipfs/QmPuMU53dPfQVHBhsRL1bMN5onWmCNM4rA1fDrSKf84q1t\"]},\"src/interfaces/pool/IUniswapV3PoolEvents.sol\":{\"keccak256\":\"0x8b6e88e62efd8e6d60a4f5edd6f8fe0329f1809b0c507acb99d1669c3486253d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://745c11ac5693279fa2571288bdce92725eea75f76867671bc4e645d49807a5ba\",\"dweb:/ipfs/QmckigcQJbkehRf2eF5CSCsJes2R1LL6UD2Xvx4TuCPb36\"]},\"src/interfaces/pool/IUniswapV3PoolImmutables.sol\":{\"keccak256\":\"0xbfc9bf17aaaac7215c84fd9983c8442fd5db03f94be7038f38d562c245b72ab0\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://89ca0e5e95a820b624e0aacd73964a2acbcb4b1d0c62998857378f0b45f2bf37\",\"dweb:/ipfs/QmXGHVA7hqbiJ1gFgti1MuXRpM5CKFWUQs5J6XrS7Dn71M\"]},\"src/interfaces/pool/IUniswapV3PoolOwnerActions.sol\":{\"keccak256\":\"0x0c0a46f8cf7871486e8d67c63d29694d54088ca76f1abb96734917582de3426d\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://7c18d3f435ce0c8cf1af4c6b5b73b458dfa9648a61ca65ecf6f9ff30b4221089\",\"dweb:/ipfs/QmWuHyA8HMoqSixuPh5CKmQZdMFUCquKDjxEZkjE6y21xy\"]},\"src/interfaces/pool/IUniswapV3PoolState.sol\":{\"keccak256\":\"0x453762d668949145b3e2e96f1d743bbf8aefda244a7f1fafb8a1a36c54791511\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://247df2c64b4ec5146f5b8ab17d29009fa0fb98307c99f656a4789b0f5971fc8a\",\"dweb:/ipfs/Qme48ZafBBtsxEpsGDkmJzYSk463KeyiqB3v5YiYNuxKng\"]},\"src/libraries/BitMath.sol\":{\"keccak256\":\"0x49195d443de8dce0ea44e80a8353cc9ef84d16c256bdf26b27245fa36cfda410\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b145eff85254843074d98ac7ec1f36939827c8a0d60b21606bc33a36a689fefb\",\"dweb:/ipfs/QmVpBtvusMCTeRLZpwDssVHgzk4922krpBoFKsAS6s36SR\"]},\"src/libraries/FixedPoint128.sol\":{\"keccak256\":\"0x2d1f4f73ae0d8f0a210b8d30084659b57c56ac8f2f96011fca36f00a6d417178\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://2ba88933f16cd2df398e19c6ad227268f83c03081b70d243c97116d2ed9bc241\",\"dweb:/ipfs/QmTUGxdh8snzEM9VrTSS47StCg9VVWvvLJtJeNnMTFY4xb\"]},\"src/libraries/FixedPoint96.sol\":{\"keccak256\":\"0x0ba8a9b95a956a4050749c0158e928398c447c91469682ca8a7cc7e77a7fe032\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://186d3b528866065a5856f96d2aeec698efa99f8da913e9adf34f8cc296cc993d\",\"dweb:/ipfs/QmUAiMvtAQp8c9dy57bqJYzG7hkb1uChiPaQmt264skoqP\"]},\"src/libraries/FullMath.sol\":{\"keccak256\":\"0xfadf1aac0ee6f81cd93017f0fd43d0bf01277fa35ee8dc706631575cce97832e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://60ef26b982e59274e799e119349e942d905686a8b6d96e99aafb42bcc87f0c15\",\"dweb:/ipfs/QmaSZziUDviB8zym8WK7hHivJC3ZcQZ64k7GmKzMoAiDqK\"]},\"src/libraries/LiquidityMath.sol\":{\"keccak256\":\"0x6dce43076c42e6bf02f105cc871058bf4489c62a2c9cb22a3e2ec4de46786bac\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://cebd32a5f5b5e1f76ab0625acc343bdc0dde8112bc4d2412173987c6bfe516d2\",\"dweb:/ipfs/QmNnu74K9JE2Jcn6KKCEYyjsVqQErUW46ts2pw1eZcPuAo\"]},\"src/libraries/LowGasSafeMath.sol\":{\"keccak256\":\"0xac50fdc560e7a776d5780a814d082a28c6b3c24c462f09afd9eb6f374a0cac42\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://0640cf661bb29644d6c7337da4a341f0678427de72db1e535ea152f0a408a7be\",\"dweb:/ipfs/QmTGmgQpgSmSYnQwZWtyd3GmMNvEMiNHfbNobMtn4EQARy\"]},\"src/libraries/Oracle.sol\":{\"keccak256\":\"0xfd70845cb830e1354dc1624f367e60a9eaf3e364d3703df1323fbbd5b3c4cc7f\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://eaee21fa4731d09d2ba1f298e669ec4c500458827d5b1ed3a6fcb4d7c04af19e\",\"dweb:/ipfs/QmPkd7PmXe5LvSMn3TS3AHvpwJ92sQF4mWfmTngs6eTVpg\"]},\"src/libraries/Position.sol\":{\"keccak256\":\"0xee4addb322cbeccdf7966516f6e40b05f62b69732ec543294e4384aecf1b5158\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://3b3decae84077c9c60b7469bbb6a7ef1602a8415b2d2487f9c7a89b84f870f7d\",\"dweb:/ipfs/QmStcy7fgebxwT4zME9PXVV9qXCkosTDzfhbg52ERtAhus\"]},\"src/libraries/SafeCast.sol\":{\"keccak256\":\"0x75622893bc0e6a914159f95ddce97bfbfc60848f649a829c4f792d58a24b1ee3\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://21938751ace1ef23f768edc81c6e08323c620ad94f9519f21a8e19390dc7a071\",\"dweb:/ipfs/QmbRaGBfFnKKpbMXanhEkX81qfCQQiwHpMXW7cnhVBXGnn\"]},\"src/libraries/SqrtPriceMath.sol\":{\"keccak256\":\"0x3b44772a405abcec93c8ce30da34c02d52fcc02a147ee098f3d56d2dfb3f683b\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://859b2e3161a6aa77ca2d7cf1898169ac06fcb049fc5cb463df49e194e90954f8\",\"dweb:/ipfs/QmbBYQTZcu8L41Z64D885tgW5NbAquiMof6aRoS6Q1AuBF\"]},\"src/libraries/SwapMath.sol\":{\"keccak256\":\"0xb13859ea7aa5970e9bc5da2190f00519296508199aab6f45a30d69dc345e98d9\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://ff47564187b01f4d95384bbb35b34165da79ae4e42aa76b11f48d46dd936e39d\",\"dweb:/ipfs/QmVgmEiFef1WeTHgMyHyg7vhBEhQxLXUWhvg64wE8d6XEf\"]},\"src/libraries/Tick.sol\":{\"keccak256\":\"0xb7e5339dd6e91a794e4055a087f5669c090330ff8c20490adce2f2b26c68ccf6\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://906518562e89c95b74965b1d378ba7b5aac0eb996b46e097318188cab7a91797\",\"dweb:/ipfs/QmZDbnMUxym6dAeW91Ld1c6LcFNj7jmcxScggxSxxYDLc6\"]},\"src/libraries/TickBitmap.sol\":{\"keccak256\":\"0x358f0e180b2421bd776bb0e06eae2079493955b7481cd6ba274330c70f9a8209\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://e8b382bc6149ef8c7af12e1bf517bb07083ab583161c63736ca37c26ddd1b3fc\",\"dweb:/ipfs/QmegRKL1weW1ShCSXPFZbAhrc4qMgeFhHKktNLAs156hqa\"]},\"src/libraries/TickMath.sol\":{\"keccak256\":\"0x9cb61353fe7dd1b6e8da0a9a9a71128f4b94e231716f8fc6751f956d8f568d39\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://52775cb7284cd3ec4f5d8e1ba7d3b9e433214e2f151c700297446f5978b0d40e\",\"dweb:/ipfs/QmWqYJDDUEYxtieU62SqXFZ68gfJa9vh9PhUSVJBDixpGs\"]},\"src/libraries/TransferHelper.sol\":{\"keccak256\":\"0xbf7a6f86631ca075940925edf07bef3b35f1c90d464e8610d7fbf029e1523525\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://bc4844b011949bc3394c66a6d551b68a1c4ecd305d611a543db323979c9ac0d0\",\"dweb:/ipfs/Qmcnem1evVsJfb8NjETPsv2vJ8AuBcHifxrqp57XHcXQSv\"]},\"src/libraries/UnsafeMath.sol\":{\"keccak256\":\"0xec45a36a0d38b809b5253ae85d524b230f30f82021b8abf73dbcb9085869e8c3\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://4e8bcfd4f9ad52f93f0c6ec08fac1d52baa824c629b943bc85050a83916f8fc2\",\"dweb:/ipfs/Qmb6qinRpwhKi8UstPxLa2eKyRRzfPkzyPixYV8LL3AoqK\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "parameters",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "factory",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickSpacing",
+              "type": "int24"
+            },
+            {
+              "internalType": "address",
+              "name": "deployer",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "parameters()": {
+            "notice": "Get the parameters to be used in constructing the pool, set transiently during pool creation."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=lib/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/UniswapV3PoolDeployer.sol": "UniswapV3PoolDeployer"
+      },
+      "evmVersion": "paris",
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "src/NoDelegateCall.sol": {
+        "keccak256": "0x1310b4cdbddce9ffd7a7332701cbe9e05053fd3458ee69d8be1c66d0b2f61062",
+        "urls": [
+          "bzz-raw://1bb5432321dd72c793580b8d6889c4d431d4677edd044d29f34fcda4bb14d03c",
+          "dweb:/ipfs/QmfVyeBahdz6RwV7Am69k5jCVNeuDbiUDqN7W2MiBDuSEy"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/UniswapV3Pool.sol": {
+        "keccak256": "0x1dfd74716b7b4b223a540f8dba95b4bce55829b04eed635eeaccea1cdfd2e9c1",
+        "urls": [
+          "bzz-raw://5626d96345bc7bdb8963132c066c7c8e33d99b156152785d0d0ca83c94973887",
+          "dweb:/ipfs/Qmdk5tk86wVeRDxdrBhxMuZu6QQ4QCVuJz6mjKq9i7Ur4f"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/UniswapV3PoolDeployer.sol": {
+        "keccak256": "0x6ce1517649aa26da83d5e51d4c7fd85e25365b759ccf18b07617dc72557885f7",
+        "urls": [
+          "bzz-raw://b6da51d92a6c7a506338be32cac20d07ba2ccf37ed984038252716a6a9604f0a",
+          "dweb:/ipfs/QmbTxeE19RKTR4s3bWgy3w17Jg1bcky8sHWBiW9yML2kSP"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/interfaces/IERC20Minimal.sol": {
+        "keccak256": "0x6a4b798d07873922974c31ccd331b532b456b59eb7e3cfdb92f2dda63153bf60",
+        "urls": [
+          "bzz-raw://12d582fb3e77a1cf18af6e669ad41769a8fa27edc6d05bcc705a211bc132e448",
+          "dweb:/ipfs/QmbPfCmzoTkVxhNa2g6CKynxXcgBUUi7YUvUPrL7qdKKTM"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/IUniswapV3Factory.sol": {
+        "keccak256": "0x35b865d61f3b9c20caecf9d20305bb4e4652eee10fc75d8712064539ddf6850b",
+        "urls": [
+          "bzz-raw://b9a1ea70771d856ac5efe7197c3c976da295291ed3d8cd7ea008d3e41c199962",
+          "dweb:/ipfs/QmYaenuVGRMGdwPoXQ74kmxnbF6wrg7NTU5XqtUGbmPCyp"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/IUniswapV3Pool.sol": {
+        "keccak256": "0xdb0de307537fba604bf6c32953a1f95cd6d0077b3d13a049f0e1b6f9583ca428",
+        "urls": [
+          "bzz-raw://b47928ea080c4fa9da894d51215bd9fe189a30d9d46ee8023b8d0baea716fd4a",
+          "dweb:/ipfs/QmPgH877bfaCqvPHqDHGqpiaHUkUGLYR7bKctGmK5Wihhd"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/IUniswapV3PoolDeployer.sol": {
+        "keccak256": "0x1fa3ce7f41570d448b3049ba45ce15e148a4506a2ebe1a931db8dd559d668e14",
+        "urls": [
+          "bzz-raw://80f5ba958ceb5a9c66dcc0294e6045bebb36487f830eee3b2b082d685fd9f7e2",
+          "dweb:/ipfs/QmSW3s63uKn7tk98HpQn7yCqWzV66iGxbNFrwo5814mvf1"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/callback/IUniswapV3FlashCallback.sol": {
+        "keccak256": "0xc5345e3baec52f486b55d456e1fb50659998da861c94862c291e8a1367e0405a",
+        "urls": [
+          "bzz-raw://f9c50cffb5fded1c4b28ed9de235a9c8578179dd12074759986166537a57df52",
+          "dweb:/ipfs/QmQq8mRmHH9S8PXXKcxvdvdNT4oY4tLPB3XG2m1BVaBjHX"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/callback/IUniswapV3MintCallback.sol": {
+        "keccak256": "0xe3f520f1cc97d4a831eecb96efc03da190ceb50762a9fa011a168eafce7f2d2a",
+        "urls": [
+          "bzz-raw://39898e322b28fa5fc2f3bbe51e81b00b3048da9dafd2b288e8afe5445fd06366",
+          "dweb:/ipfs/QmfUf6j86Qz89WybRmnbRC1Y9Yjmm4eimJPLDYysTdQ4LD"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/callback/IUniswapV3SwapCallback.sol": {
+        "keccak256": "0xe7897cf7e7b028d8df325127f33412a1553ab8f92b61a304c54fb5daa0dc038f",
+        "urls": [
+          "bzz-raw://a822d62230131144bab49da2a56b6c2b832d8ea779c4824152f54b371969f67b",
+          "dweb:/ipfs/QmbE5zt6CCZKZUJVFaqfP2s1GTwg5FkSvXdfcW72sUNtk2"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/pool/IUniswapV3PoolActions.sol": {
+        "keccak256": "0x27135a5465a44c003e90e9a7f2dcef7399ddcb960dfaa77012ddc0d2762eef11",
+        "urls": [
+          "bzz-raw://e90f7169e9a49d53987e559a8a96304ee7ee55f0e05994a24af52203de6bf7ff",
+          "dweb:/ipfs/QmShJp1xCWb22ZB6LdCLcTs1ZsZZ5gRFcErCyLAE9TLxHw"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/pool/IUniswapV3PoolDerivedState.sol": {
+        "keccak256": "0xe5055655db272d2c78431356f32f73315144aa8fc8d8211a6997b5ee43f0dfbf",
+        "urls": [
+          "bzz-raw://c7c55226ec781e4273fabecc48a77ab4f76aec948746bf0a22a76a98af5e12e4",
+          "dweb:/ipfs/QmPuMU53dPfQVHBhsRL1bMN5onWmCNM4rA1fDrSKf84q1t"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/pool/IUniswapV3PoolEvents.sol": {
+        "keccak256": "0x8b6e88e62efd8e6d60a4f5edd6f8fe0329f1809b0c507acb99d1669c3486253d",
+        "urls": [
+          "bzz-raw://745c11ac5693279fa2571288bdce92725eea75f76867671bc4e645d49807a5ba",
+          "dweb:/ipfs/QmckigcQJbkehRf2eF5CSCsJes2R1LL6UD2Xvx4TuCPb36"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/pool/IUniswapV3PoolImmutables.sol": {
+        "keccak256": "0xbfc9bf17aaaac7215c84fd9983c8442fd5db03f94be7038f38d562c245b72ab0",
+        "urls": [
+          "bzz-raw://89ca0e5e95a820b624e0aacd73964a2acbcb4b1d0c62998857378f0b45f2bf37",
+          "dweb:/ipfs/QmXGHVA7hqbiJ1gFgti1MuXRpM5CKFWUQs5J6XrS7Dn71M"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/pool/IUniswapV3PoolOwnerActions.sol": {
+        "keccak256": "0x0c0a46f8cf7871486e8d67c63d29694d54088ca76f1abb96734917582de3426d",
+        "urls": [
+          "bzz-raw://7c18d3f435ce0c8cf1af4c6b5b73b458dfa9648a61ca65ecf6f9ff30b4221089",
+          "dweb:/ipfs/QmWuHyA8HMoqSixuPh5CKmQZdMFUCquKDjxEZkjE6y21xy"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/interfaces/pool/IUniswapV3PoolState.sol": {
+        "keccak256": "0x453762d668949145b3e2e96f1d743bbf8aefda244a7f1fafb8a1a36c54791511",
+        "urls": [
+          "bzz-raw://247df2c64b4ec5146f5b8ab17d29009fa0fb98307c99f656a4789b0f5971fc8a",
+          "dweb:/ipfs/Qme48ZafBBtsxEpsGDkmJzYSk463KeyiqB3v5YiYNuxKng"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/BitMath.sol": {
+        "keccak256": "0x49195d443de8dce0ea44e80a8353cc9ef84d16c256bdf26b27245fa36cfda410",
+        "urls": [
+          "bzz-raw://b145eff85254843074d98ac7ec1f36939827c8a0d60b21606bc33a36a689fefb",
+          "dweb:/ipfs/QmVpBtvusMCTeRLZpwDssVHgzk4922krpBoFKsAS6s36SR"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/FixedPoint128.sol": {
+        "keccak256": "0x2d1f4f73ae0d8f0a210b8d30084659b57c56ac8f2f96011fca36f00a6d417178",
+        "urls": [
+          "bzz-raw://2ba88933f16cd2df398e19c6ad227268f83c03081b70d243c97116d2ed9bc241",
+          "dweb:/ipfs/QmTUGxdh8snzEM9VrTSS47StCg9VVWvvLJtJeNnMTFY4xb"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/FixedPoint96.sol": {
+        "keccak256": "0x0ba8a9b95a956a4050749c0158e928398c447c91469682ca8a7cc7e77a7fe032",
+        "urls": [
+          "bzz-raw://186d3b528866065a5856f96d2aeec698efa99f8da913e9adf34f8cc296cc993d",
+          "dweb:/ipfs/QmUAiMvtAQp8c9dy57bqJYzG7hkb1uChiPaQmt264skoqP"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/FullMath.sol": {
+        "keccak256": "0xfadf1aac0ee6f81cd93017f0fd43d0bf01277fa35ee8dc706631575cce97832e",
+        "urls": [
+          "bzz-raw://60ef26b982e59274e799e119349e942d905686a8b6d96e99aafb42bcc87f0c15",
+          "dweb:/ipfs/QmaSZziUDviB8zym8WK7hHivJC3ZcQZ64k7GmKzMoAiDqK"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/LiquidityMath.sol": {
+        "keccak256": "0x6dce43076c42e6bf02f105cc871058bf4489c62a2c9cb22a3e2ec4de46786bac",
+        "urls": [
+          "bzz-raw://cebd32a5f5b5e1f76ab0625acc343bdc0dde8112bc4d2412173987c6bfe516d2",
+          "dweb:/ipfs/QmNnu74K9JE2Jcn6KKCEYyjsVqQErUW46ts2pw1eZcPuAo"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/LowGasSafeMath.sol": {
+        "keccak256": "0xac50fdc560e7a776d5780a814d082a28c6b3c24c462f09afd9eb6f374a0cac42",
+        "urls": [
+          "bzz-raw://0640cf661bb29644d6c7337da4a341f0678427de72db1e535ea152f0a408a7be",
+          "dweb:/ipfs/QmTGmgQpgSmSYnQwZWtyd3GmMNvEMiNHfbNobMtn4EQARy"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/Oracle.sol": {
+        "keccak256": "0xfd70845cb830e1354dc1624f367e60a9eaf3e364d3703df1323fbbd5b3c4cc7f",
+        "urls": [
+          "bzz-raw://eaee21fa4731d09d2ba1f298e669ec4c500458827d5b1ed3a6fcb4d7c04af19e",
+          "dweb:/ipfs/QmPkd7PmXe5LvSMn3TS3AHvpwJ92sQF4mWfmTngs6eTVpg"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/libraries/Position.sol": {
+        "keccak256": "0xee4addb322cbeccdf7966516f6e40b05f62b69732ec543294e4384aecf1b5158",
+        "urls": [
+          "bzz-raw://3b3decae84077c9c60b7469bbb6a7ef1602a8415b2d2487f9c7a89b84f870f7d",
+          "dweb:/ipfs/QmStcy7fgebxwT4zME9PXVV9qXCkosTDzfhbg52ERtAhus"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/libraries/SafeCast.sol": {
+        "keccak256": "0x75622893bc0e6a914159f95ddce97bfbfc60848f649a829c4f792d58a24b1ee3",
+        "urls": [
+          "bzz-raw://21938751ace1ef23f768edc81c6e08323c620ad94f9519f21a8e19390dc7a071",
+          "dweb:/ipfs/QmbRaGBfFnKKpbMXanhEkX81qfCQQiwHpMXW7cnhVBXGnn"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/SqrtPriceMath.sol": {
+        "keccak256": "0x3b44772a405abcec93c8ce30da34c02d52fcc02a147ee098f3d56d2dfb3f683b",
+        "urls": [
+          "bzz-raw://859b2e3161a6aa77ca2d7cf1898169ac06fcb049fc5cb463df49e194e90954f8",
+          "dweb:/ipfs/QmbBYQTZcu8L41Z64D885tgW5NbAquiMof6aRoS6Q1AuBF"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/libraries/SwapMath.sol": {
+        "keccak256": "0xb13859ea7aa5970e9bc5da2190f00519296508199aab6f45a30d69dc345e98d9",
+        "urls": [
+          "bzz-raw://ff47564187b01f4d95384bbb35b34165da79ae4e42aa76b11f48d46dd936e39d",
+          "dweb:/ipfs/QmVgmEiFef1WeTHgMyHyg7vhBEhQxLXUWhvg64wE8d6XEf"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/libraries/Tick.sol": {
+        "keccak256": "0xb7e5339dd6e91a794e4055a087f5669c090330ff8c20490adce2f2b26c68ccf6",
+        "urls": [
+          "bzz-raw://906518562e89c95b74965b1d378ba7b5aac0eb996b46e097318188cab7a91797",
+          "dweb:/ipfs/QmZDbnMUxym6dAeW91Ld1c6LcFNj7jmcxScggxSxxYDLc6"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/libraries/TickBitmap.sol": {
+        "keccak256": "0x358f0e180b2421bd776bb0e06eae2079493955b7481cd6ba274330c70f9a8209",
+        "urls": [
+          "bzz-raw://e8b382bc6149ef8c7af12e1bf517bb07083ab583161c63736ca37c26ddd1b3fc",
+          "dweb:/ipfs/QmegRKL1weW1ShCSXPFZbAhrc4qMgeFhHKktNLAs156hqa"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "src/libraries/TickMath.sol": {
+        "keccak256": "0x9cb61353fe7dd1b6e8da0a9a9a71128f4b94e231716f8fc6751f956d8f568d39",
+        "urls": [
+          "bzz-raw://52775cb7284cd3ec4f5d8e1ba7d3b9e433214e2f151c700297446f5978b0d40e",
+          "dweb:/ipfs/QmWqYJDDUEYxtieU62SqXFZ68gfJa9vh9PhUSVJBDixpGs"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/TransferHelper.sol": {
+        "keccak256": "0xbf7a6f86631ca075940925edf07bef3b35f1c90d464e8610d7fbf029e1523525",
+        "urls": [
+          "bzz-raw://bc4844b011949bc3394c66a6d551b68a1c4ecd305d611a543db323979c9ac0d0",
+          "dweb:/ipfs/Qmcnem1evVsJfb8NjETPsv2vJ8AuBcHifxrqp57XHcXQSv"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/libraries/UnsafeMath.sol": {
+        "keccak256": "0xec45a36a0d38b809b5253ae85d524b230f30f82021b8abf73dbcb9085869e8c3",
+        "urls": [
+          "bzz-raw://4e8bcfd4f9ad52f93f0c6ec08fac1d52baa824c629b943bc85050a83916f8fc2",
+          "dweb:/ipfs/Qmb6qinRpwhKi8UstPxLa2eKyRRzfPkzyPixYV8LL3AoqK"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "id": 4
+}
