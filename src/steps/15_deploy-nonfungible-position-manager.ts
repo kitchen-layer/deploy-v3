@@ -11,7 +11,7 @@ const extendedArtifact = {
 export const DEPLOY_NONFUNGIBLE_POSITION_MANAGER = createDeployContractStep({
   key: 'nonfungibleTokenPositionManagerAddress',
   artifact: extendedArtifact,
-  computeArguments(state, config) {
+  computeArguments(state) {
     if (state.v3CoreFactoryAddress === undefined) {
       throw new Error('Missing V3 Core Factory')
     }
@@ -22,6 +22,6 @@ export const DEPLOY_NONFUNGIBLE_POSITION_MANAGER = createDeployContractStep({
       throw new Error('Missing NFT Timelock')
     }
 
-    return [state.v3CoreFactoryAddress, config.weth9Address, state.descriptorProxyAddress, state.nftTimelockAddress]
+    throw new Error("Please deploy the Nonfungible Position Manager manually from the kitchen dex periphery")
   },
 })

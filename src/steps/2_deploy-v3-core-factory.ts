@@ -8,7 +8,11 @@ const extendedArtifact = {
   bytecode: CustomUniswapV3Factory.bytecode.object
 }
 
-export const DEPLOY_V3_CORE_FACTORY = createDeployContractStep({
+/* export const DEPLOY_V3_CORE_FACTORY = createDeployContractStep({
   key: 'v3CoreFactoryAddress',
   artifact: extendedArtifact
-})
+}) */
+
+export const DEPLOY_V3_CORE_FACTORY = () => {
+  throw new Error("Please deploy the V3 Core Factory manually from the kitchen dex periphery")
+}

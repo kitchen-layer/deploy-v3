@@ -8,7 +8,12 @@ const extendedArtifact = {
   bytecode: SimpleNFTTimelock.bytecode.object,
 }
 
-export const DEPLOY_NFT_TIMELOCK = createDeployContractStep({
+/* export const DEPLOY_NFT_TIMELOCK = createDeployContractStep({
   key: 'nftTimelockAddress',
   artifact: extendedArtifact,
 })
+ */
+
+export const DEPLOY_NFT_TIMELOCK = () => {
+  throw new Error("Please deploy the NFT Timelock manually from the kitchen dex periphery")
+}
