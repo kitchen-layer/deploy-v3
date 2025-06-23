@@ -15,7 +15,8 @@
     "start": "node dist/index.js",
     "prepublishOnly": "yarn build",
     "verify": "ts-node src/generate-verify-commands.ts",
-    "refresh-artifacts": "ts-node src/refresh-artifacts.ts"
+    "refresh-artifacts": "ts-node src/refresh-artifacts.ts",
+    "env-vars": "ts-node src/generate-env-vars.ts"
   },
   "files": [
     "dist/"
@@ -67,6 +68,7 @@
   },
   "dependencies": {
     "@uniswap/v2-core": "^1.0.1",
-    "@uniswap/v2-periphery": "^1.1.0-beta.0"
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "ethers": "^6.14.0"
   }
 }
