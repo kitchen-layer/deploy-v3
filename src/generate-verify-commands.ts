@@ -11,31 +11,19 @@ const config = {
 
 const commands = [
   {
-    cd: '../kitchen-dex-core/',
+    cd: '../v3/kitchen-dex-core/',
     contracts: [
       {
         name: 'UniswapV3Factory',
         address: state.v3CoreFactoryAddress,
         path: './src/UniswapV3Factory.sol:UniswapV3Factory',
         args: [],
-      },
-      {
-        name: 'UniswapV3PoolDeployer',
-        address: state.v3DeployerAddress,
-        path: './src/UniswapV3PoolDeployer.sol:UniswapV3PoolDeployer',
-        args: [],
       }
     ],
   },
   {
-    cd: '../kitchen-v2-periphery/',
+    cd: '../v2/kitchen-v2-periphery/',
     contracts: [
-      {
-        name: 'UniswapV2Factory',
-        address: state.v2FactoryAddress,
-        path: './src/UniswapV2Factory.sol:UniswapV2Factory',
-        args: [config.ownerAddress],
-      },
       {
         name: 'UniswapV2Router02',
         address: state.v2RouterAddress,
@@ -45,7 +33,18 @@ const commands = [
     ],
   },
   {
-    cd: '../kitchen-dex-periphery/',
+    cd: '../v2/kitchen-v2-core/',
+    contracts: [
+      {
+        name: 'UniswapV2Factory',
+        address: state.v2FactoryAddress,
+        path: './contracts/UniswapV2Factory.sol:UniswapV2Factory',
+        args: [config.ownerAddress],
+      }
+    ],
+  },
+  {
+    cd: '../v3/kitchen-dex-periphery/',
     contracts: [
       {
         name: 'NonfungiblePositionManager',
@@ -56,7 +55,7 @@ const commands = [
       {
         name: 'Quoter',
         address: state.quoterAddress,
-        path: './src/Quoter.sol:Quoter',
+        path: './src/lens/Quoter.sol:Quoter',
         args: [state.v3CoreFactoryAddress, config.weth9Address],
       },
       {
@@ -86,36 +85,36 @@ const commands = [
       {
         name: 'SimpleNFTTimelock',
         address: state.nftTimelockAddress,
-        path: './src/nftTimelock.sol:SimpleNFTTimelock',
+        path: './contracts/nftTimelock.sol:SimpleNFTTimelock',
         args: [],
       }
     ],
   },
   {
-    cd: '../kitchen-swap-router-contracts/',
+    cd: '../../kitchen-swap-router-contracts/',
     contracts: [
       {
         name: 'QuoterV2',
         address: state.quoterV2Address,
-        path: './src/QuoterV2.sol:QuoterV2',
+        path: './contracts/lens/QuoterV2.sol:QuoterV2',
         args: [state.v3CoreFactoryAddress, config.weth9Address],
       },
       {
         name: 'SwapRouter02',
         address: state.swapRouter02,
-        path: './src/SwapRouter02.sol:SwapRouter02',
+        path: './contracts/SwapRouter02.sol:SwapRouter02',
         args: [state.v3CoreFactoryAddress, state.v2FactoryAddress, config.weth9Address],
       },
       {
         name: 'MixedRouteQuoterV1',
         address: state.mixedRouteQuoterV1Address,
-        path: './src/MixedRouteQuoterV1.sol:MixedRouteQuoterV1',
+        path: './contracts/lens/MixedRouteQuoterV1.sol:MixedRouteQuoterV1',
         args: [state.v3CoreFactoryAddress, state.v2FactoryAddress, config.weth9Address],
       }
     ],
   },
   {
-    cd: '../v3-staker/',
+    cd: '../v3/v3-staker/',
     contracts: [
       {
         name: 'UniswapV3Staker',
@@ -132,7 +131,7 @@ for (const { cd, contracts } of commands) {
   console.log(`# Verifying contracts in ${cd}`)
   for (const { name, address, path, args } of contracts) {
     const argsString = args.length > 0 ? `--constructor-args "${args.join(',')}"` : ''
-    console.log(`cd ${cd} && forge verify-contract ${argsString} ${address} ${path} --verifier-url=https://explorer.kitchen-layer.com/api/ --verifier blockscout --watch && cd ../deploy-v3`)
+    console.log(`cd ${cd} && forge verify-contract ${argsString} ${address} ${path} --verifier-url=https://explorer.kitchen-layer.com/api/ --verifier blockscout --watch --compiler-version 0.8.24 && cd ../deploy-v3`)
   }
   console.log('')
 } 
